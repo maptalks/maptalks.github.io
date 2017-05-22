@@ -1,0 +1,54 @@
+.dialog {
+    width: 512px;
+    background-color: #FFF;
+    border-radius:2px;
+    overflow:hidden;
+    display: flex;
+    flex-direction:column;
+    &.expand{
+        margin:60px 0;
+        flex:1;
+        width:auto;
+    }
+    >.title-area {
+        padding: 16px;
+        border-bottom:1px solid #eaeaea;
+        display:flex;
+        justify-content: space-between;
+        .title {
+            line-height: 24px;
+            height: 24px;
+            font-size: 18px;
+            color:@primary-text-color;
+        }
+        .dialog-close-button{
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            background-image: url("@{img-root}/dialog-close.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.7;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    >.content-area {
+        padding: 32px 32px 56px 32px;
+        flex:1;
+        .text-field + .text-field{
+            margin-top: @base-grid*2;
+        }
+    }
+    >.action-area {
+        border-top:1px solid #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 16px;
+        .button,.primary-button + .button,.primary-button {
+            margin-left: @base-grid*2;
+        }
+    }
+}

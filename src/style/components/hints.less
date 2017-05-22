@@ -1,0 +1,23 @@
+@hint-text-color: rgba(0,0,0,0.38);
+@error-hint-text-color: @alert-color;
+
+.proto-hint(@text-color: @hint-text-color) {
+    font-size: @font-size-xs;
+    color: @text-color;
+}
+
+.hint {
+    .proto-hint();
+}
+.error-hint {
+    .proto-hint(@text-color: @error-hint-text-color);
+}
+
+.hint-bar {
+    height: 24px;
+    .error-hint,hint {
+        height: 24px;
+        line-height: 24px;
+        color: @alert-color;
+    }
+}

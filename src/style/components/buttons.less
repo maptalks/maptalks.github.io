@@ -1,0 +1,54 @@
+@button-bg: #fff;
+@button-bd: 1px solid @button-border-color;
+@button-text-color: @primary-text-color;
+
+@button-height: @control-line-height;
+@button-br: 2px;
+
+@primary-button-text-color: @primary-text-color-light;
+@primary-button-bg: @primary-color;
+@primary-button-bd: 1px solid @primary-color;
+
+.proto-button(
+    @text-color:@button-text-color;
+    @height:@button-height;
+    @bg:@button-bg;
+    @bd:@button-bd;
+    @br:@button-br
+) {
+    min-width:80px;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 30px;
+    height: @height;
+    font-size:12px;
+    padding: 0 20px;
+    text-align: center;
+    background-color: @bg;
+    color: @text-color;
+    border-radius: @br;
+    border: @bd;
+    cursor: pointer;
+    outline: none;
+    transition:all 0.3s;
+    &:hover{
+        background-color: #f0f0f0;
+    }
+}
+
+.button {
+    text-decoration: none;
+    border-radius:3px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.primary-button {
+    font-weight:lighter;
+    .proto-button(@text-color: @primary-button-text-color, @bg: @primary-button-bg, @bd: @primary-button-bd);
+    font-size:12px;
+    &:hover{
+        background-color: #4192ba;
+        border-color:#4192ba;
+    }
+}
