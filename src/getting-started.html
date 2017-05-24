@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>download</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="script/lib/prettify.css">
+        <script src="script/lib/jquery.js"></script>
+        <script src="script/lib/run_prettify.js"></script>
+        <script src="script/main.js"></script>
+        <link rel="stylesheet" href="script/maptalks/maptalks.css">
+    </head>
+
+    <body>
+        <div class="download-entry">
+            <div class="hero-banner-area">
+                <div class="header center-block">
+                    <div class="logo-panel">
+                        <a href="index.html" class="logo"></a>
+                    </div>
+                    <div class="navigator">
+                        <div class="nav-item">
+                            <div class="nav-title">
+                                <a href="gallery.html">Gallery</a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="nav-title">Documentation</div>
+
+                            <div class="nav-dropdown">
+                                <div class="nav-back"></div>
+                                <div class="nav-section selected">
+                                    <a href="API.html">API</a>
+                                </div>
+                                <div class="nav-section">
+                                    <a href="examples.html">Examples</a>
+                                </div>
+                                <div class="nav-section">
+                                    <a href="wiki.html">Wiki</a>
+                                </div>
+                                <div class="nav-section">
+                                    <a href="https://github.com/maptalks/docs/archive/gh-pages.zip">Download API and Examples</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="nav-item">
+                            <div class="nav-title">
+                                <a href="plugins.html">Plugins</a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <div class="nav-title">
+                                <a href="support.html">服务与支持</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="banner-panel center-block">
+                    <div class="slogan">
+                        Maptalks is an open-source javascript library to create maps for enterprise applications
+                    </div>
+                    <div class="intro">
+                        Maptalks’s goal is keeping on delivering the essential features and plugins for enterprise project developers and makes maps
+                        developing simple and joyful.
+                    </div>
+                </div> -->
+            </div>
+            <div class="doc-area markdown">
+                <h2>5-min Quick Start of maptalks.js</h2>
+                <p>
+                    This QuickStart goal is to help you run a maptalks.js map application and let you warm up for the remaining documentation samples. 
+                </p>
+                <!-- <p>
+                    You can choose to run with a standalone file or with NPM.
+                </p> -->
+                <!-- <a href="#Standalone">Standalone</a><br>
+                <a href="#NPM">NPM</a><br> -->
+                <h2 id="Standalone">Steps</h2>
+                <ol>
+                    <li>
+                        Create a folder
+                    </li>
+                    <li>
+                        (Optional) Download <a href="">latest release</a> into the folder and unzip it.
+                    </li>
+                    <li>
+                        Create a hello.html in the folder. <br><br>                        
+                        Include maptalks css file in the head section, you can either use unpkg.com or downloaded one in step 2.<br>         
+                        <pre class="prettyprint">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/maptalks/dist/maptalks.css&quot;&gt;</pre><br>
+                        Include maptalks script in the head section, you can either use unpkg.com or downloaded one in step 2.<br>
+
+                        <pre class="prettyprint">&lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;</pre><br>
+                        Content of hello.html: <br>
+                        <pre class="prettyprint">
+ &lt;!DOCTYPE&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+     &lt;meta charset=&quot;UTF-8&quot; /&gt;
+     &lt;title&gt;Maptalks Quick Start&lt;/title&gt;
+     &lt;!-- or link to your downloaded files --&gt;
+     &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/maptalks/dist/maptalks.css&quot;&gt;
+     &lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;div style=&quot;width:800px;height:600px;&quot; id=&quot;map&quot;&gt;&lt;/div&gt;
+ &lt;script type=&quot;text/javascript&quot;&gt;
+   // create map in div &apos;map&apos;
+   var map = new maptalks.Map(&apos;map&apos;, {
+     center: [0, 0],
+     zoom: 1,
+     baseLayer: new maptalks.TileLayer(&apos;base&apos;, {
+       &apos;urlTemplate&apos; : &apos;http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png&apos;,
+       &apos;subdomains&apos;  : [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;]
+     }),
+     attribution: {
+       &apos;content&apos;:&apos;&amp;copy; &lt;a href=&quot;http://www.osm.org/copyright&quot;&gt;OSM&lt;/a&gt; contributors, &apos;+
+        &apos;&amp;copy; &lt;a href=&quot;https://carto.com/attributions&quot;&gt;CARTO&lt;/a&gt;&apos;
+     }
+   });
+ &lt;/script&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+                        </pre>
+                    </li>
+                    <li>
+                        Open the start.html directly in the browser and THAT’S IT!                        
+                        <div id="map" style="width:400px;height:300px;margin-top:20px;border:1px solid #bbb;">
+                        </div>
+                    </li>
+                    <li>
+                        Want to make some more? <br><br>
+                        Read the <a href="https://github.com/maptalks/maptalks.js/wiki" target="_blank">wiki</a>,
+                        check out the <a href="https://maptalks.github.io/docs/examples/en/index.html" target="_blank">examples</a> and start to make some real maps!
+                    </li>
+                </ol>
+                <br>                
+            </div>
+            <div class="footer">                
+            </div>
+        </div>
+        <script type="text/javascript" src="script/maptalks/maptalks.min.js"></script>
+        <script type="text/javascript">
+               // create map in div 'map'
+               var map = new maptalks.Map('map', {
+                 center: [0, 0],
+                 zoom: 1,
+                 baseLayer: new maptalks.TileLayer('base', {
+                    'urlTemplate' : 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+                    'subdomains'  : ['a','b','c','d','e']
+                 }),
+                 attributionControl: {
+                   'position' : {
+                        left : 0,
+                        bottom : 0
+                   },
+                   'content':'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                 }
+               });
+        </script>
+    </body>
+
+</html>

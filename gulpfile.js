@@ -6,7 +6,7 @@ var paths = {
     styleSrc: './src/style/**/*.less',
     styleEntries: ['./src/style/main.less'],
     styleDist: './dist/style',
-    scriptSrc: './src/script/**/*.js',
+    scriptSrc: './src/script/**/*',
     scriptDist: './dist/script',
     imageSrc: './src/resource/image/**/*',
     imageDist: './dist/resource/image',
