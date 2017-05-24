@@ -101,7 +101,7 @@ body{
                     z-index:1;
                 }
                 .nav-section{
-                    transform:translateY(-300%);
+                    transform:translateY(-300px);
                     padding:0 6px;
                     line-height: 32px;
                     transition:all 0.2s;
@@ -114,6 +114,8 @@ body{
                         color:rgba(255,255,255,0.87);
                         text-decoration: none;
                         transition:all 0.3s;
+                        position: relative;
+                        z-index: 20;
                     }
                     &:before{
                         content:'';
@@ -125,6 +127,7 @@ body{
                         left:0;
                         opacity: 0;
                         transition:all 0.3s;
+                        z-index: 2;
                     }
                     &:hover{
                         &:before{
