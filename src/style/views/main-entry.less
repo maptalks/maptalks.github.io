@@ -3,16 +3,39 @@
     overflow: auto;
     .hero-banner-area{
         height: @area-height;
-        background-image: url("@{img-root}/banner.png");
-        background-repeat: no-repeat;
-        background-size: cover;
         color:#fff;
+        position: relative;
+        .hero-banner{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            .banner-img{
+                display: block;
+                width: 100%;
+                height: auto;
+                min-width:1400px;
+            }
+        }
         .banner-panel{
+            position: relative;
+            z-index: 2;
             margin-top:200px;
             .slogan{
                 font-size:40px;
-                line-height: 100px;
+                line-height: 48px;
                 font-weight: bold;
+            }
+            .slogan-detail{
+                font-size:16px;
+                line-height: 48px;
+                padding-bottom:32px;
             }
             .button-area{
                 display: flex;
