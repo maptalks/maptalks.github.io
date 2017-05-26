@@ -1,22 +1,17 @@
 <!doctype html>
-<html lang="en-US">
-
+<html>
     <head>
         <meta charset="UTF-8">
-        <title>maptalks - </title>
+        <title>maptalks - a light-weight javascript library for maps</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="style/main.css">
-        <script src="script/lib/jquery.js"></script>
-        <script src="script/main.js"></script>
-        <!-- Place this tag in your head or just before your close body tag. -->
-        <script async defer src="https://buttons.github.io/buttons.js"></script>
     </head>
 
     <body>
-        <div class="main-entry">
+        <div class="main-entry">        
             <div class="hero-banner-area">
-                <div class="hero-banner">
-                    <img src="resource/image/banner.png" alt="" class="banner-img">
+                <div id="map" class="hero-banner" style="background-image:url('resource/image/bodyback.png');">
+                    
                 </div>
                 <div class="header center-block">
                     <div class="logo-panel">
@@ -33,16 +28,16 @@
                             <div class="nav-dropdown">
                                 <div class="nav-back"></div>
                                 <div class="nav-section selected">
-                                    <a href="https://maptalks.github.io/docs/api/Map.html">API</a>
+                                    <a href="https://maptalks.github.io/docs/api/Map.html" title="API Reference">API</a>
                                 </div>
                                 <div class="nav-section">
-                                    <a href="https://maptalks.github.io/docs/examples/en/index.html">Examples</a>
+                                    <a href="https://maptalks.github.io/docs/examples/en/index.html" title="Examples">Examples</a>
                                 </div>
                                 <div class="nav-section">
-                                    <a href="https://github.com/maptalks/maptalks.js/wiki">Wiki</a>
+                                    <a href="https://github.com/maptalks/maptalks.js/wiki" title="Wiki of maptalks.js">Wiki</a>
                                 </div>
                                 <div class="nav-section">
-                                    <a href="https://github.com/maptalks/docs/archive/gh-pages.zip">Download</a>
+                                    <a href="https://github.com/maptalks/docs/archive/gh-pages.zip" download="maptalks-api-examples.zip" title="Download zipped API and Examples">Download</a>
                                 </div>
                             </div>
 
@@ -60,19 +55,19 @@
                     </div>
                 </div>
                 <div class="banner-panel center-block">
-                    <div class="slogan">Create Maps, Unlimitedly.</div>
+                    <div class="slogan">Create Maps, Unlimitedly</div>
                     <div class="slogan-detail">
-                        A light-weight javascript library for interactive maps
+                        A light-weight javascript library for maps
                     </div>
                     <div class="button-area">
                         <a href="getting-started.html" class="started-button button">Getting Started</a>
                         <div class="download-button button">
                             <div class="primary-text">Download</div>
-                            <div class="secondary-text">version:0.21.3</div>
+                            <div class="secondary-text">version:0.25.1</div>
                         </div>
-                        <a class="github-button" href="https://github.com/maptalks/maptalks.js" data-icon="octicon-star" data-style="mega" data-show-count="true"
+                        <a class="github-button" href="https://github.com/maptalks/maptalks.js" data-icon="octicon-star" data-size="large" data-show-count="true"
                             aria-label="Star maptalks/maptalks.js on GitHub" style="display:none">Star</a>
-                        <a class="github-button" href="https://github.com/maptalks/maptalks.js/fork" data-icon="octicon-repo-forked" data-style="mega"
+                        <a class="github-button" href="https://github.com/maptalks/maptalks.js/fork" data-icon="octicon-repo-forked" data-size="large"
                             data-show-count="true" aria-label="Fork maptalks/maptalks.js on GitHub" style="display:none">Fork</a>
                     </div>
                 </div>
@@ -132,7 +127,7 @@
                         Built in the open
                     </div>
                     <div class="intro">
-                        <a href="" class="link">Maptalks.js</a>is open source, hosted, developed, and maintained on GitHub.
+                        <a href="https://github.com/maptalks/maptalks.js" class="link">maptalks.js is open source, hosted, developed, and maintained on GitHub.</a>
                     </div>
                 </div>
             </div>
@@ -149,7 +144,7 @@
                         <div class="secondary-feature-icon item-2"></div>
                         <div class="secondary-feature-title">Feature Packed</div>
                         <div class="secondary-feature-text">
-                            Built-in DrawTool/Editor/MeasureTool, necessary features for mapping projects.
+                            Built-in DrawTool/Editor/MeasureTool, necessary features for enterprise projects.
                         </div>
                     </div>
                     <div class="secondary-feature-item">
@@ -187,13 +182,16 @@
             </div>
             <div class="footer">
                 <div>
-                    京ICP备11017824号-4 / 京ICP证130164号
-                </div>
-                <div>
-                    北京市公安局朝阳分局备案编号:110105000501. Copyright ©maptalks
-                </div>
+                    &copy;maptalks.org 2017
+                </div>              
             </div>
         </div>
+        <script src="script/lib/jquery.js"></script>
+        <script src="script/main.js"></script> 
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script src="script/topojson.v1.min.js"></script>
+        <script src="script/world.js"></script>
+        <script type="text/javascript" src="script/maptalks/maptalks.min.js"></script>
     </body>
 
 </html>
