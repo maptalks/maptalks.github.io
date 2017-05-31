@@ -11,7 +11,9 @@ var paths = {
     imageSrc: './src/resource/image/**/*',
     imageDist: './dist/resource/image',
     templateSrc: './src/*.html',
-    templateDist: './dist'
+    templateDist: './dist',
+    staticPageSrc : ['./src/gallery/**/*'],
+    staticPageDist : ['./dist/gallery']
 }
 
 gulp.task('buildStyle', function () {
@@ -29,6 +31,13 @@ gulp.task('buildScript', function () {
         .pipe(gulp.dest(paths.scriptDist))
 })
 
+gulp.task('copyPages', function () {
+    paths.staticPageSrc.forEach(function (pageSrc, idx) {
+        gulp.src(pageSrc)
+            .pipe(gulp.dest(paths.staticPageDist[idx]))
+    })
+});
+
 gulp.task('buildImage', function () {
     gulp.src(paths.imageSrc)
         .pipe(gulp.dest(paths.imageDist))
@@ -45,6 +54,9 @@ gulp.task('watch', function () {
     gulp.watch(paths.styleSrc, ['buildStyle'])
     gulp.watch(paths.templateSrc, ['buildTemplate'])
     gulp.watch(paths.imageSrc, ['buildImage'])
+    paths.staticPageSrc.forEach(function (pageSrc) {
+        gulp.watch(paths.pageSrc, ['copyPages'])
+    });
 })
 
 gulp.task('connect', function () {
@@ -55,6 +67,6 @@ gulp.task('connect', function () {
     })
 })
 
-gulp.task('build', ['buildImage', 'buildTemplate', 'buildStyle', 'buildScript'])
+gulp.task('build', ['buildImage', 'buildTemplate', 'buildStyle', 'buildScript', 'copyPages'])
 
 gulp.task('default', ['build', 'watch', 'connect'])
