@@ -10,12 +10,12 @@
         .heading { background-color: #34495e; color : #fff; padding:8px 8px; font : 24px sans-serif; }
     </style>
     <title>Trajetories</title>
-    <script type="text/javascript" src="trajectories.js"></script>
-    <script type="text/javascript" src="../../script/maptalks/maptalks.min.js"></script>
-    <script type="text/javascript" src="../common/maptalks.webgl.min.js"></script>
 </head>
 <body scroll="no">
-<div id="mapObj" style="width:100%;height:100%;"></div>
+<div id="mapObj" style="width:100%;height:100%;">Loading data.....<br> It's a 4M(gzipped) file with 615948 points, please be patient.</div>
+<script type="text/javascript" src="trajectories.js"></script>
+<script type="text/javascript" src="../../script/maptalks/maptalks.min.js"></script>
+<script type="text/javascript" src="../common/maptalks.webgl.min.js"></script>
 <script type="text/javascript" >    
     var map = new maptalks.Map('mapObj',
     {
