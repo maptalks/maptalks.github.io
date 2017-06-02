@@ -189,3 +189,142 @@
         }
     }
 }
+
+@media (max-width:420px) and (min-width:310px){
+    .gallery-entry{
+        overflow-x: hidden;
+        .feature-demo-panel{
+            margin-top:32px;
+            display: flex;
+            flex-wrap:wrap;
+            .title{
+                width: 100%;
+                margin-bottom:16px;
+                border-bottom:1px solid rgba(0,0,0,0.08);
+                font-size:18px;
+                line-height: 40px;
+                font-weight: bold;
+                color:@primary-title-color;
+            }
+            .demo-area{
+                cursor: pointer;
+                width: 100%;
+                position: relative;
+                margin-bottom:12px;
+                .img-area{
+                    height: 240px;
+                    position: relative;
+                    overflow:hidden;
+                    display: flex;
+                    align-items: center;
+                    background: rgba(0,0,0,0.5);
+                    .img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .detail{
+                    position: absolute;
+                    bottom:0; 
+                    width: 100%;
+                    box-sizing:border-box;
+                    color:#fff;
+                    background-image: linear-gradient(-180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+                    padding:8px;
+                    .demo-name{
+                        font-size:16px;
+                        line-height: 32px;
+                        font-weight:bold;
+                    }
+                    .intro{
+                        font-size:12px;
+                        line-height: 18px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color:#f0f0f0;
+                    }
+                }
+            }
+            .demo-area +.demo-area{
+                margin-left:0;
+            }
+        
+        }
+        .all-demo-grid{
+            margin-top:32px;
+            margin-bottom:48px;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            .title{
+                width: 100%;
+                margin-bottom:16px;
+                border-bottom:1px solid rgba(0,0,0,0.08);
+                font-size:18px;
+                line-height: 40px;
+                font-weight: bold;
+                color:@primary-title-color;
+            }
+            .demo-grid-tile{
+                cursor: pointer;
+                width: 49%;
+                margin-right:0;
+                margin-bottom:2%;
+                position: relative;
+                &.wrap{
+                    margin-right:0;
+                }
+                .img-area{
+                    height: 150px;
+                    .mask{
+                        .overview-button{
+                            width: 80px;
+                            height: 24px;
+                            text-align: center;
+                            line-height: 24px;
+                            font-size: 12px;
+                            font-weight:bold;
+                            border-radius:2px;
+                            color:#fff;
+                            cursor: pointer;
+                            border:1px solid #fff;
+                            transition:all 0.3s;
+                            &:hover{
+                                background: #fff;
+                                color:@primary-text-color;
+                            }
+                        }
+                    }
+                }
+                .detail{
+                    position: absolute;
+                    bottom:0; 
+                    width: 100%;
+                    box-sizing:border-box;
+                    color:#fff;
+                    background-image: linear-gradient(-180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+                    padding:8px;
+                    transition:all 0.3s;
+                    .demo-name{
+                        font-size:16px;
+                        line-height: 32px;
+                        font-weight:bold;
+                    }
+                    .intro{
+                        font-size:12px;
+                        line-height: 18px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: #f0f0f0;
+                        transition:all 0.3s;
+                    }
+                }
+                &:hover{
+                    .detail{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
