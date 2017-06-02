@@ -44,12 +44,12 @@
                     height: 48px;
                     background: #fff;
                     line-height: 48px;
-                    color:@primary-color;
+                    color:#000;
                     font-size:16px;
                     font-weight: bold;
                     transition:all 0.3s;
                     &:hover{
-                        background:#f0f0f0;
+                        background:#efefef;
                     }
                 }
                 .download-button{
@@ -136,9 +136,12 @@
                     .feature-icon{
                         background-image: url("@{img-root}/feature-icon/3d.png");
                         background-repeat: no-repeat;
-                        background-position: center center;
+                        background-size:cover;
                     }
                 }
+            }
+            &.performant-mobile{
+                display: none;
             }
             &.performant{
                 background-color: @dark-background;
@@ -148,7 +151,7 @@
                         margin-left:auto;
                         background-image: url("@{img-root}/feature-icon/performant.png");
                         background-repeat: no-repeat;
-                        background-position: center center;
+                        background-size:cover;
                     }
                     .feature-title{
                         color:#fff;
@@ -164,7 +167,7 @@
                     .feature-icon{
                         background-image: url("@{img-root}/feature-icon/extensible.png");
                         background-repeat: no-repeat;
-                        background-position: center center;
+                        background-size:cover;
                     }
                 }
             }
@@ -245,21 +248,27 @@
                 margin:60px auto 0 auto;
                 &.item-1{
                     background: url("@{img-root}/feature-icon/1.png") no-repeat center center;
+                    background-size: cover;
                 }
                 &.item-2{
                     background: url("@{img-root}/feature-icon/2.png") no-repeat center center;
+                    background-size: cover;
                 }
                 &.item-3{
                     background: url("@{img-root}/feature-icon/3.png") no-repeat center center;
+                    background-size: cover;
                 }
                 &.item-4{
                     background: url("@{img-root}/feature-icon/4.png") no-repeat center center;
+                    background-size: cover;
                 }
                 &.item-5{
                     background: url("@{img-root}/feature-icon/5.png") no-repeat center center;
+                    background-size: cover;
                 }
                 &.item-6{
                     background: url("@{img-root}/feature-icon/6.png") no-repeat center center;
+                    background-size: cover;
                 }
             }
             .secondary-feature-title{
@@ -311,6 +320,218 @@
                         }
                     }
                 }             
+            }
+        }
+    }
+}
+
+@media (max-width:420px) and (min-width:310px){
+    .main-entry{
+        overflow-x:hidden;
+        .hero-banner-area{
+            .banner-panel{
+                margin-top:120px;
+                .slogan{
+                }
+                .slogan-detail{
+                    padding-bottom:32px;
+                }
+                .button-area{
+                    display: block;
+                    .started-button{
+                        display: block;
+                        width: 160px;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size:16px;
+                        margin-bottom:20px;
+                    }
+                    .download-button{
+                        margin:0;
+                        width: 160px;
+                        height: 40px;
+                        .primary-text{
+                            font-size:14px;
+                            font-weight: bold;
+                            line-height: 18px;
+                            margin-top:2px;
+                        }
+                        .secondary-text{
+                            font-size: 12px;
+                            line-height: 14px;
+                        }
+                    }
+                    iframe{
+                        margin-left: 0;
+                        margin-right: 16px;
+                    }
+                }
+            }
+        }
+        .feature-area{
+            .feature-panel{
+                height: auto;
+                .center-block{
+                    padding:48px 0;
+                    flex-direction: column;
+                    height: auto;
+                    justify-content: flex-start;
+                    .left-area{
+                        width: auto;
+                        height: auto;
+                        box-sizing: border-box;
+                    }
+                    .right-area{
+                        width:auto;
+                        height: auto;
+                        box-sizing:border-box;
+                    }
+                    .img-area{
+                        width: 90%;
+                        img{
+                        }
+                    }
+                    .content-area{
+                        display: flex;
+                        margin-top:20px;
+                        position: relative;
+                        flex-direction: column;
+                        justify-content: center;
+                        .feature-icon{
+                            width: 40px;
+                            height: 40px;
+                            border-radius:4px;
+                            position: absolute;
+                            left:0;
+                            top:16px;
+                        }
+                        .feature-title{
+                            font-size: 24px;
+                            line-height: 72px;
+                            padding-left:50px;
+                        }
+                        .feature-text{
+                            font-size:16px;
+                            line-height:32px;
+                            padding-top:8px;
+                            margin-top:0px;
+                        }
+                    }
+                }   
+                
+                &.performant{
+                    display: none;
+                }
+                &.performant-mobile{
+                    display: block;
+                    background-color: @dark-background;
+                    .img-area{
+                        width: 65%;
+                        img{
+                        }
+                    }
+                    .content-area{
+                        .feature-icon{
+                            margin-left:auto;
+                            background-image: url("@{img-root}/feature-icon/performant.png");
+                            background-repeat: no-repeat;
+                            background-size:cover;
+                        }
+                        .feature-title{
+                            color:#fff;
+                        }
+                        .feature-text{
+                            color:#fff;
+                            border-top:1px solid rgba(255,255,255,0.3);
+                        }
+                    }
+                }
+                &.extensible{
+                    .img-area{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                            margin-left:-70%;
+                        }
+                    }
+                }
+            }
+        }
+        .github-area{
+            height: auto;
+            display: block;
+            position: relative;
+            .logo{
+                width: 48px;
+                height: 48px;
+                background: url("@{img-root}/github.png") no-repeat center center;
+                background-size: cover;
+                position: absolute;
+                top:32px;
+                left:24px;
+            }
+            .content-area{
+                border-left:none;
+                padding-left:0px;
+                margin-left:0px;
+                padding:32px 24px;
+                .title{
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 48px;
+                    padding-left:64px;
+                    margin-bottom:16px;
+                }
+                .intro{
+                    font-size: 14px;
+                    line-height: 24px;
+                    .link{
+                        color:#fff;
+                        margin-right:0px;
+                        text-decoration: underline;
+                        &:before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .secondary-feature-area{
+            padding:16px 0 40px 0;
+            .secondary-feature-panel{
+                display: block;
+                justify-content: center;
+            }
+            .secondary-feature-item{
+                margin:24px;
+                width: auto;
+                height: auto;
+                min-height: 108px;
+                text-align: left;
+                position: relative;
+                padding-left:80px;
+                .secondary-feature-icon{
+                    width: 64px;
+                    height: 64px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin:0;
+                    position: absolute;
+                    top:4px;
+                    left:0;
+                }
+                .secondary-feature-title{
+                    color:@primary-title-color;
+                    font-size: 18px;
+                    line-height: 36px;
+                    font-weight: bold;
+                }
+                .secondary-feature-text{
+                    color:@text-color-light;
+                    font-size: 12px;
+                    line-height: 24px;
+                }
             }
         }
     }
