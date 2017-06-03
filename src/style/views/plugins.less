@@ -14,6 +14,25 @@
             
         }
     }
+    .tab-panel{
+        display: flex;        
+        .tab-item{
+            margin-right:20px;
+            line-height:24px ;
+            font-size:14px;            
+            transition:all 0.3s;
+            font-weight: bold;
+            cursor: pointer;
+            padding:0 2px;
+            transition:color 0.3s;
+            &:hover{
+                color:@text-color-gray;
+            }
+            a{
+                color:@primary-color;
+            }            
+        }
+    }
     .plugin-list-area{
         &.alt-area{
             background: #f8f8f8;
@@ -67,28 +86,7 @@
                 }
             }
         }
-        .tab-panel{
-            display: flex;
-            margin-bottom:16px;
-            .tab-item{
-                margin-right:20px;
-                line-height:24px ;
-                font-size:14px;
-                color:@text-color-light;
-                transition:all 0.3s;
-                font-weight: bold;
-                cursor: pointer;
-                padding:0 2px;
-                transition:color 0.3s;
-                &:hover{
-                    color:@text-color-gray;
-                }
-                &.current{
-                    color:@primary-color;
-                    border-bottom:2px solid @primary-color;
-                }
-            }
-        }
+        
         .featured-plugin-list {
             justify-content : space-between;
         }
@@ -104,13 +102,14 @@
             
             padding:0;
             .plugin-item{
-                cursor: pointer;
                 list-style:none;
                 width : 240px;
                 box-shadow: 0 6px 48px 0 rgba(0,0,0,0.1);                
                 margin-bottom: 10px;
                 margin-right: 20px;
-                
+                a {
+                    text-decoration: none;
+                }              
                 .img-panel{
                     height: 160px;
                     position: relative;
@@ -122,20 +121,21 @@
                         left: 0;
                         height: 60px;
                         width: 100%;
-                        .author{
-                            font-size: 14px;
-                            line-height: 72px;
-                            color:#fff;
+                        .author{                            
+                            line-height: 72px;                            
                             display: flex;
                             align-items: center;
                             .avatar{
                                 width: 28px;
                                 height: 28px;
                                 border-radius: 50%;
-                                margin:0 8px;
-                                background-image: url("@{img-root}/avatar.png");
+                                margin:0 8px;                                
                                 background-repeat: no-repeat;
                                 background-position: center center;
+                            }
+                            .author-name a{
+                                color:#fff;
+                                font-size: 14px;
                             }
                         }
                     }
@@ -145,6 +145,7 @@
                     padding:4px 8px;
                     width: 100%;
                     box-sizing: border-box;
+
                     .plugin-name{
                         font-size:14px;
                         line-height: 28px;

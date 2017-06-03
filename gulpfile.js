@@ -12,8 +12,8 @@ var paths = {
     imageDist: './dist/resource/image',
     templateSrc: './src/*.html',
     templateDist: './dist',
-    staticPageSrc : ['./src/gallery/**/*'],
-    staticPageDist : ['./dist/gallery']
+    staticPageSrc : ['./src/gallery/**/*', './src/plugins/**/*'],
+    staticPageDist : ['./dist/gallery', './dist/plugins']
 }
 
 gulp.task('buildStyle', function () {
