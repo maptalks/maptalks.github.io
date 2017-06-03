@@ -40,7 +40,7 @@
                 justify-content: center;
                 font-weight:bold;
                 .button{
-                    width: 80px;
+                    width: 120px;
                     line-height: 28px;
                     height: 32px;
                     box-sizing: border-box;
@@ -89,20 +89,28 @@
                 }
             }
         }
+        .featured-plugin-list {
+            justify-content : space-between;
+        }
         .plugin-list{
             display: flex;
             flex-wrap:wrap;
+            @media screen {
+                justify-content : flex-start;
+            }
+            @media screen and (max-width: 590px) {
+                justify-content : center;
+            }
+            
             padding:0;
             .plugin-item{
                 cursor: pointer;
                 list-style:none;
-                width: 24.1%;
-                box-shadow: 0 6px 48px 0 rgba(0,0,0,0.1);
-                margin-right:1.2%;
-                margin-bottom: 1.2%;
-                &.wrap{
-                    margin-right:0;
-                }
+                width : 240px;
+                box-shadow: 0 6px 48px 0 rgba(0,0,0,0.1);                
+                margin-bottom: 10px;
+                margin-right: 20px;
+                
                 .img-panel{
                     height: 160px;
                     position: relative;
