@@ -18,8 +18,7 @@
             color:@primary-title-color;
         }
         .demo-area{
-            cursor: pointer;
-            width: 49.5%;
+            width: 49%;
             position: relative;
             .img-area{
                 height: 400px;
@@ -29,7 +28,6 @@
                 align-items: center;
                 background: rgba(0,0,0,0.5);
                 .img{
-                    width: 100%;
                     display: block;
                 }
                 .mask{
@@ -57,6 +55,7 @@
                         cursor: pointer;
                         border:1px solid #fff;
                         transition:all 0.3s;
+                        text-decoration: none;
                         &:hover{
                             background: #fff;
                             color:@primary-text-color;
@@ -66,7 +65,7 @@
             }
             .detail{
                 position: absolute;
-                bottom:0; 
+                bottom:0;
                 width: 100%;
                 box-sizing:border-box;
                 color:#fff;
@@ -82,6 +81,9 @@
                     line-height: 24px;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    a {
+                        color: #fff;
+                    }
                 }
             }
             &:hover{
@@ -93,14 +95,14 @@
         .demo-area +.demo-area{
             margin-left:1%;
         }
-       
+
     }
     .all-demo-grid{
         margin-top:48px;
         margin-bottom:144px;
         display: flex;
         flex-wrap:wrap;
-        
+
         .title{
             width: 100%;
             margin-bottom:0.95%;
@@ -111,7 +113,6 @@
             color:@primary-title-color;
         }
         .demo-grid-tile{
-            cursor: pointer;
             width: 32.7%;
             margin-right:0.95%;
             margin-bottom:0.95%;
@@ -154,7 +155,9 @@
                         cursor: pointer;
                         border:1px solid #fff;
                         transition:all 0.3s;
+                        text-decoration: none;
                         &:hover{
+                            text-decoration: none;
                             background: #fff;
                             color:@primary-text-color;
                         }
@@ -163,7 +166,7 @@
             }
             .detail{
                 position: absolute;
-                bottom:0; 
+                bottom:0;
                 width: 100%;
                 box-sizing:border-box;
                 color:#fff;
@@ -179,6 +182,9 @@
                     line-height: 24px;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    a {
+                        color: #fff;
+                    }
                 }
             }
             &:hover{
@@ -225,7 +231,7 @@
                 }
                 .detail{
                     position: absolute;
-                    bottom:0; 
+                    bottom:0;
                     width: 100%;
                     box-sizing:border-box;
                     color:#fff;
@@ -242,13 +248,16 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         color:#f0f0f0;
+                        a {
+                            color: #fff;
+                        }
                     }
                 }
             }
             .demo-area +.demo-area{
                 margin-left:0;
             }
-        
+
         }
         .all-demo-grid{
             margin-top:32px;
@@ -289,6 +298,7 @@
                             cursor: pointer;
                             border:1px solid #fff;
                             transition:all 0.3s;
+                            text-decoration: none;
                             &:hover{
                                 background: #fff;
                                 color:@primary-text-color;
@@ -298,7 +308,7 @@
                 }
                 .detail{
                     position: absolute;
-                    bottom:0; 
+                    bottom:0;
                     width: 100%;
                     box-sizing:border-box;
                     color:#fff;
@@ -317,6 +327,9 @@
                         text-overflow: ellipsis;
                         color: #f0f0f0;
                         transition:all 0.3s;
+                        a {
+                            color: #fff;
+                        }
                     }
                 }
                 &:hover{
