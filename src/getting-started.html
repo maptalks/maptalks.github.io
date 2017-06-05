@@ -17,8 +17,9 @@
         <div class="download-entry">
             <div class="hero-banner-area">
                 <div class="header center-block">
-                    <div class="logo-panel">
+                    <div class="title-panel">
                         <a href="index.html" class="logo"></a>
+                        <div class="sub-title">Getting Started</div>
                     </div>
                     <div class="navigator">
                         <div class="nav-item">
@@ -71,7 +72,8 @@
             <div class="doc-area markdown">
                 <h2>5-min Quick Start of maptalks.js</h2>
                 <p>
-                    This QuickStart goal is to help you run a maptalks.js map application and let you warm up for the remaining documentation samples. 
+                    This QuickStart goal is to help you run a maptalks.js map application and let you warm up for the remaining documentation
+                    samples.
                 </p>
                 <!-- <p>
                     You can choose to run with a standalone file or with NPM.
@@ -87,13 +89,12 @@
                         (Optional) Download <a href="">latest release</a> into the folder and unzip it.
                     </li>
                     <li>
-                        Create a hello.html in the folder. <br><br>                        
-                        Include maptalks css file in the head section, you can either use unpkg.com or downloaded one in step 2.<br>         
-                        <pre class="prettyprint">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/maptalks/dist/maptalks.css&quot;&gt;</pre><br>
-                        Include maptalks script in the head section, you can either use unpkg.com or downloaded one in step 2.<br>
+                        Create a hello.html in the folder. <br><br> Include maptalks css file in the head section, you can
+                        either use unpkg.com or downloaded one in step 2.<br>
+                        <pre class="prettyprint">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/maptalks/dist/maptalks.css&quot;&gt;</pre><br> Include maptalks script in the head section, you can either use unpkg.com or downloaded one
+                        in step 2.<br>
 
-                        <pre class="prettyprint">&lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;</pre><br>
-                        Content of hello.html: <br>
+                        <pre class="prettyprint">&lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;</pre><br> Content of hello.html: <br>
                         <pre class="prettyprint">
  &lt;!DOCTYPE&gt;
  &lt;html&gt;
@@ -126,39 +127,39 @@
                         </pre>
                     </li>
                     <li>
-                        Open the hello.html directly in the browser and THAT’S IT!                        
+                        Open the hello.html directly in the browser and THAT’S IT!
                         <div id="map" style="width:400px;height:300px;margin-top:20px;border:1px solid #bbb;">
                         </div>
                     </li>
                     <li>
-                        Want to make some more? <br><br>
-                        Read the <a href="https://github.com/maptalks/maptalks.js/wiki" target="_blank">wiki</a>,
-                        check out the <a href="https://maptalks.github.io/docs/examples/en/index.html" target="_blank">examples</a> and start to make some real maps!
+                        Want to make some more? <br><br> Read the <a href="https://github.com/maptalks/maptalks.js/wiki"
+                            target="_blank">wiki</a>, check out the <a href="https://maptalks.github.io/docs/examples/en/index.html"
+                            target="_blank">examples</a> and start to make some real maps!
                     </li>
                 </ol>
-                <br>                
+                <br>
             </div>
-            <div class="footer">                
+            <div class="footer">
             </div>
         </div>
         <script type="text/javascript" src="script/maptalks/maptalks.min.js"></script>
         <script type="text/javascript">
-               // create map in div 'map'
-               var map = new maptalks.Map('map', {
-                 center: [0, 0],
-                 zoom: 1,
-                 baseLayer: new maptalks.TileLayer('base', {
-                    'urlTemplate' : 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
-                    'subdomains'  : ['a','b','c','d','e']
-                 }),
-                 attributionControl: {
-                   'position' : {
-                        left : 0,
-                        bottom : 0
-                   },
-                   'content':'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                 }
-               });
+            // create map in div 'map'
+            var map = new maptalks.Map('map', {
+                center: [0, 0],
+                zoom: 1,
+                baseLayer: new maptalks.TileLayer('base', {
+                    'urlTemplate': 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+                    'subdomains': ['a', 'b', 'c', 'd', 'e']
+                }),
+                attributionControl: {
+                    'position': {
+                        left: 0,
+                        bottom: 0
+                    },
+                    'content': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                }
+            });
         </script>
     </body>
 
