@@ -430,7 +430,15 @@
                         }
                     }
                 }   
-                
+                 &.three-dimensional{
+                    .content-area{
+                        .feature-icon{
+                            background-image: url("@{img-root}/feature-icon/3d@2x.png");
+                            background-repeat: no-repeat;
+                            background-size:cover;
+                        }
+                    }
+                }
                 &.performant{
                     display: none;
                 }
@@ -445,7 +453,7 @@
                     .content-area{
                         .feature-icon{
                             margin-left:auto;
-                            background-image: url("@{img-root}/feature-icon/performant.png");
+                            background-image: url("@{img-root}/feature-icon/performant@2x.png");
                             background-repeat: no-repeat;
                             background-size:cover;
                         }
@@ -463,6 +471,13 @@
                         width: 100%;
                         img{
                             width: 100%;
+                        }
+                    }
+                    .content-area{
+                        .feature-icon{
+                            background-image: url("@{img-root}/feature-icon/extensible@2x.png");
+                            background-repeat: no-repeat;
+                            background-size:cover;
                         }
                     }
                 }
