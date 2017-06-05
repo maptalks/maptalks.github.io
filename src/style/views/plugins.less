@@ -16,20 +16,39 @@
     }
     .tab-panel{
         display: flex;
+        padding-top:96px;
         .tab-item{
-            margin-right:20px;
-            line-height:24px ;
+            margin-right:32px;
+            line-height: 40px;
             font-size:14px;
             transition:all 0.3s;
             font-weight: bold;
             cursor: pointer;
-            padding:0 2px;
-            transition:color 0.3s;
             &:hover{
                 color:@text-color-gray;
             }
             a{
                 color:@primary-color;
+                transition:color 0.3s;
+                text-decoration: none;
+                position: relative;
+                display: block;
+                line-height: 24px;
+                &:before{
+                    content:"";
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 1px;
+                    background: @primary-color;
+                    transition:all 0.3s;
+                    position: absolute;
+                    bottom:0;
+                }
+                &:hover{
+                    &:before{
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
     }
@@ -38,7 +57,7 @@
             background: #f8f8f8;
         }
         &.bottom-space{
-
+            margin-bottom:120px;
         }
         padding:48px 0;
         .title-panel{
