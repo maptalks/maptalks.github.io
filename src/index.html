@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>maptalks - a light-weight javascript library for maps</title>
+        <title>maptalks - for building 2D/3D maps</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" href="style/main.css">
     </head>
@@ -57,20 +57,19 @@
                     </div>
                 </div>
                 <div class="banner-panel center-block">
-                    <div class="slogan">Create Maps, Unlimitedly</div>
+                    <div class="slogan">To Map Everything</div>
                     <div class="slogan-detail">
-                        A light-weight javascript library for maps
+                        A light-weight JavaScript framework for building 2D/3D maps, and open to extend with any tech you love.
                     </div>
                     <div class="button-area">
                         <a href="getting-started.html" class="started-button button">Getting Started</a>
-                        <div class="download-button button">
+                        <a href="https://github.com/maptalks/maptalks.js/releases" class="download-button button">
                             <div class="primary-text">Download</div>
-                            <div class="secondary-text">version:0.25.1</div>
-                        </div>
+                            <div class="secondary-text"></div>
+                        </a>
                         <div style="height:60px">
                             <a class="github-button" href="https://github.com/maptalks/maptalks.js" data-icon="octicon-star" data-size="large" data-show-count="true"
                                 aria-label="Star maptalks/maptalks.js on GitHub" style="display:none">Star</a>
-                            <!-- <a class="github-button" href="https://github.com/maptalks/maptalks.js/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork maptalks/maptalks.js on GitHub" style="display:none">Fork</a> -->
                         </div>
                     </div>
                 </div>
@@ -83,56 +82,52 @@
                         </div>
                         <div class="right-area content-area">
                             <div class="feature-icon"></div>
-                            <div class="feature-title">3D</div>
+                            <div class="feature-title">2D & 3D</div>
                             <div class="feature-text">
-                                Gear 2D maps with third dimension.
-                                <br>Build 3D maps with Canvas 2D and WebGL.
+                                Maptalks can display maps in both 2D and 3D view by pitching and rotating 2D maps. In keeping with simplicity of 2D maps, 3D/oblique view brings new insights for your map data. To make life easier, 3D in maptalks is not limited to hardcore WebGL but also Canvas 2D and CSS 3D.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="feature-panel performant">
+                <div class="feature-panel extensible">
                     <div class="center-block">
                         <div class="left-area content-area">
                             <div class="feature-icon"></div>
-                            <div class="feature-title">Performant</div>
+                            <div class="feature-title">An Open Framework</div>
                             <div class="feature-text">
-                                Smooth rendering of 10k geometries
-                                <br>with Canvas 2D and 1000k with WebGL.
+                                Maptalks is an open framework to extend. You can create new features in maptalks with any favored technology. Checkout <a href="plugins.html">plugins</a> with the greatests (<a href="https://github.com/maptalks/maptalks.mapboxgl" target="_blank">mapbox-gl-js</a>, <a href="https://github.com/maptalks/maptalks.three" target="_blank">THREE</a>, <a href="https://github.com/maptalks/maptalks.d3" target="_blank">D3</a>, <a href="https://github.com/maptalks/maptalks.e3" target="_blank">ECharts</a>, etc). Be free to <a href="https://github.com/maptalks/maptalks.js/wiki/">create your own</a>, it is easy and joyful.
                             </div>
                         </div>
                         <div class="right-area img-area">
-                            <img src="resource/image/feature/performant.png">
+                            <img src="resource/image/feature/extensible.png">
                         </div>
                     </div>
                 </div>
-                <div class="feature-panel performant-mobile">
-                    <div class="center-block">
-                        <div class="left-area img-area">
-                            <img src="resource/image/feature/performant.png">
-                        </div>
-                        <div class="right-area content-area">
-                            <div class="feature-icon"></div>
-                            <div class="feature-title">Performant</div>
-                            <div class="feature-text">
-                                Smooth rendering of 10k geometries
-                                <br>with Canvas 2D and 1000k with WebGL.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="feature-panel extensible">
+                <div class="feature-panel extensible-mobile">
                     <div class="center-block">
                         <div class="left-area img-area">
                             <img src="resource/image/feature/extensible.png">
                         </div>
                         <div class="right-area content-area">
                             <div class="feature-icon"></div>
-                            <div class="feature-title">Extensible</div>
+                            <div class="feature-title">Performant</div>
                             <div class="feature-text">
-                                Plugins for mapbox-gl-js, THREE,D3 and ECharts.
-                                <br>Easily create your own and share with community.
+                                Performance is always the number one priorioty. With different graphics technology, maptalks is capable of smoothly rendering 10ks geometries with Canvas 2D and millions! with WebGL.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="feature-panel performant">
+                    <div class="center-block">
+                        <div class="left-area img-area">
+                            <img src="resource/image/feature/performant.png">
+                        </div>
+                        <div class="right-area content-area">
+                            <div class="feature-icon"></div>
+                            <div class="feature-title">Performant</div>
+                            <div class="feature-text">
+                                Performance is always the number one priorioty. With different graphics technology, maptalks renders 10ks geometries smoothly with Canvas 2D and millions! with WebGL.
                             </div>
                         </div>
                     </div>
@@ -162,7 +157,7 @@
                         <div class="secondary-feature-icon item-2"></div>
                         <div class="secondary-feature-title">Feature Packed</div>
                         <div class="secondary-feature-text">
-                            Built-in DrawTool/Editor/MeasureTool, necessary features for enterprise projects.
+                            Built-in DrawTool/Editor/MeasureTool, necessary features for the most of map projects.
                         </div>
                     </div>
                     <div class="secondary-feature-item">
