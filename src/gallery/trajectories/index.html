@@ -16,9 +16,8 @@
 <script type="text/javascript" src="trajectories.js"></script>
 <script type="text/javascript" src="../../script/maptalks/maptalks.min.js"></script>
 <script type="text/javascript" src="../common/maptalks.webgl.min.js"></script>
-<script type="text/javascript" >    
-    var map = new maptalks.Map('mapObj',
-    {
+<script type="text/javascript" >
+    var map = new maptalks.Map('mapObj', {
         center:  [116.32101, 40.00279],
         zoom:   15,
         baseLayer : new maptalks.TileLayer('tile',
@@ -46,7 +45,7 @@
     var data = traces.map(function (d) {
       return [d[0] + 110, d[1] + 35, 1];
     });
-    
+
     var layer = new maptalks.BigPointLayer('trajectories', data)
         .setStyle({
             filter : true,
@@ -61,7 +60,7 @@
       }, function (r) {
         alert(r.length + ' points at click point');
       })
-    });    
+    });
 
 </script>
 </body>

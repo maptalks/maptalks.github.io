@@ -16,7 +16,7 @@
     }
     .tab-panel{
         display: flex;
-        padding-top:96px;
+        padding-top:50px;
         .tab-item{
             margin-right:32px;
             line-height: 40px;
@@ -170,6 +170,12 @@
                         font-size:14px;
                         line-height: 28px;
                         color:@primary-text-color;
+                        a {
+                            color: @primary-text-color;
+                            &:hover{
+                                text-decoration : underline;
+                            }
+                        }
                     }
                     .intro{
                         font-size:12px;
