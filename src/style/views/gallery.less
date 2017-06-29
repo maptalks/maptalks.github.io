@@ -166,10 +166,20 @@
                         border:1px solid #fff;
                         transition:all 0.3s;
                         text-decoration: none;
+                        a {
+                            display : block;
+                            width: 160px;
+                            height: 40px;
+                            text-decoration : none;
+                            color : #fff;
+                        }
                         &:hover{
                             text-decoration: none;
                             background: #fff;
                             color:@primary-text-color;
+                            a {
+                                color : @primary-text-color;
+                            }
                         }
                     }
                 }
@@ -309,9 +319,19 @@
                             border:1px solid #fff;
                             transition:all 0.3s;
                             text-decoration: none;
+                            a {
+                                display : block;
+                                width: 80px;
+                                height: 24px;
+                                text-decoration : none;
+                                color : #fff;
+                            }
                             &:hover{
                                 background: #fff;
                                 color:@primary-text-color;
+                                a {
+                                    color:@primary-text-color;
+                                }
                             }
                         }
                     }
