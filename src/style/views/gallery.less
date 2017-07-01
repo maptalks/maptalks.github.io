@@ -8,14 +8,47 @@
         margin-top:48px;
         display: flex;
         flex-wrap:wrap;
-        .title{
-            width: 100%;
+        .title-panel{
+            display:flex;
+            justify-content: space-between;
             margin-bottom:16px;
             border-bottom:1px solid rgba(0,0,0,0.08);
-            font-size:18px;
-            line-height: 40px;
-            font-weight: bold;
-            color:@primary-title-color;
+            align-items:center;
+            .title{
+                font-size:18px;
+                line-height: 40px;
+                font-weight: bold;
+                color:@primary-title-color;
+            }
+            .button-panel{
+                font-size:12px;
+                display: flex;
+                justify-content: center;
+                font-weight:bold;
+                margin-bottom: 8px;
+                .button{
+                    width: 120px;
+                    line-height: 28px;
+                    height: 32px;
+                    box-sizing: border-box;
+                    transition:all 0.3s;
+                }
+                .submit{
+                    border:2px solid @primary-color;
+                    margin-right:8px;
+                    a {
+                        color:@primary-color;
+                        text-decoration : none;
+                    }
+                    &:hover{
+                        a {
+                            color:#42a2e6;
+                        }
+                        border:2px solid #42a2e6;
+                        background: #fff;
+                    }
+                }
+            }
         }
         .demo-area{
             margin-left:39px;

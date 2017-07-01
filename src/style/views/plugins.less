@@ -89,17 +89,28 @@
                     color:@primary-color;
                     border:2px solid @primary-color;
                     margin-right:8px;
+                    a {
+                        color:@primary-color;
+                        text-decoration : none;
+                    }
                     &:hover{
-                        color:#42a2e6;
+                        a {
+                            color:#42a2e6;
+                        }
                         border:2px solid #42a2e6;
                         background: #fff;
                     }
                 }
                 .doc{
                     border:2px solid #777;
-                    color:#777;
+                    a {
+                        color:#777;
+                        text-decoration : none;
+                    }
                     &:hover{
-                        color:#555;
+                        a {
+                            color:#555;
+                        }
                         border:2px solid #555;
                         background: #fff;
                     }
@@ -156,6 +167,9 @@
                             .author-name a{
                                 color:#fff;
                                 font-size: 14px;
+                                &:hover{
+                                    text-decoration : underline;
+                                }
                             }
                         }
                     }
