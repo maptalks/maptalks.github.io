@@ -1,6 +1,6 @@
 $(function() {
-  getVersion();
   initMap();
+  getVersion();
 });
 
 function getVersion() {
@@ -35,10 +35,7 @@ function initMap() {
     hitDetect:false,
     zoomable: false,
     layers: [
-      new maptalks.VectorLayer('v', polygons, { opacity : 0.3 }),
-      new maptalks.VectorLayer('m', [
-          new maptalks.MultiPoint([[37.6178, 55.7517], [28.9744, 41.0128], [116.391212, 39.893409]/*[12.5, 41.9], [7.4458, 46.95]*//*, [116.391212, 39.893409]*/])
-        ])
+      new maptalks.VectorLayer('v', polygons, { opacity : 0.3 })
     ]
   });
 
