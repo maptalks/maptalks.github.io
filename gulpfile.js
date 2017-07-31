@@ -12,8 +12,8 @@ var paths = {
     imageDist: './dist/resource/image',
     templateSrc: './src/*.html',
     templateDist: './dist',
-    staticPageSrc : ['./src/gallery/**/*', './src/plugins/**/*'],
-    staticPageDist : ['./dist/gallery', './dist/plugins']
+    staticPageSrc: ['./src/gallery/**/*', './src/plugins/**/*'],
+    staticPageDist: ['./dist/gallery', './dist/plugins']
 }
 
 gulp.task('buildStyle', function () {
@@ -63,7 +63,7 @@ gulp.task('connect', function () {
     connect.server({
         root: 'dist',
         livereload: true,
-        port: 7071
+        port: 2000
     })
 })
 

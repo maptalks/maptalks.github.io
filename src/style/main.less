@@ -1,185 +1,185 @@
 @import "seed-ui/index";
 @import "variables";
-
 @import "components/buttons";
 @import "components/text-fields";
 @import "components/hints";
 @import "components/dialogs";
-
 @import "views/main-entry";
 @import "views/download";
 @import "views/support";
 @import "views/plugins";
 @import "views/gallery";
-
-body{
+body {
     background: #fdfdfd;
 }
 
-.center-block{
+.center-block {
     @media screen and (max-width: 1920px) {
         width: 1440px;
-        margin:0 auto;
+        margin: 0 auto;
     }
     @media screen and (max-width: 1600px) {
         width: 1280px;
-        margin:0 auto;
+        margin: 0 auto;
     }
     @media screen and (max-width: 1366px) {
         width: 1000px;
-        margin:0 auto;
+        margin: 0 auto;
     }
-    @media screen and (max-width:768px) and (min-width:420px){
+    @media screen and (max-width:768px) and (min-width:420px) {
         width: auto;
-        margin:0 30px;
+        margin: 0 30px;
     }
-    @media screen and (max-width:420px) and (min-width:376px){
+    @media screen and (max-width:420px) and (min-width:376px) {
         width: auto;
-        margin:0 20px;
+        margin: 0 20px;
     }
-    @media screen and (max-width:375px) and (min-width:300px){
+    @media screen and (max-width:375px) and (min-width:300px) {
         width: auto;
-        margin:0 16px;
+        margin: 0 16px;
     }
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     height: 96px;
     align-items: center;
     position: relative;
-    z-index:10;
-    .title-panel{
+    z-index: 10;
+    .title-panel {
         display: flex;
-        .logo{
+        .logo {
             cursor: pointer;
             display: block;
             background-image: url("@{img-root}/logo.png");
             background-repeat: no-repeat;
             background-position: left center;
-            background-size:100% 100%;
+            background-size: 100% 100%;
             height: 48px;
             width: 144px;
         }
-        .sub-title{
-            margin-left:16px;
-            color:#fff;
-            font-size:16px;
+        .sub-title {
+            margin-left: 16px;
+            color: #fff;
+            font-size: 16px;
             line-height: 18px;
-            padding-top:18px;
+            padding-top: 18px;
         }
     }
-    .navigator{
+    .navigator {
         display: flex;
-        .nav-item{
-            margin-left:30px;
+        .nav-item {
+            margin-left: 30px;
             position: relative;
-            .nav-title{
-                padding:0 6px;
-                font-weight:bold;
+            .nav-title {
+                padding: 0 6px;
+                font-weight: bold;
                 font-size: 14px;
                 line-height: 48px;
-                color:rgba(255,255,255,0.7);
-                transition:all 0.3s;
+                color: rgba(255, 255, 255, 0.7);
+                transition: all 0.3s;
                 position: relative;
-                a{
-                    color:rgba(255,255,255,0.7);
+                cursor: pointer;
+                a {
+                    color: rgba(255, 255, 255, 0.7);
                     text-decoration: none;
-                    transition:all 0.3s;
+                    transition: all 0.3s;
                     display: block;
                     width: 100%;
                     height: 100%;
                 }
-                &:before{
-                    content:'';
-                    height:1px;
-                    width:0;
+                &:before {
+                    content: '';
+                    height: 1px;
+                    width: 0;
                     background-color: #fff;
                     display: block;
                     position: absolute;
-                    bottom:8px;
-                    left:50%;
-                    transition:all 0.3s;
+                    bottom: 8px;
+                    left: 50%;
+                    transition: all 0.3s;
                 }
-                &:hover{
-                    color:rgba(255,255,255,1);
-                    a{
-                        color:rgba(255,255,255,1);
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                    a {
+                        color: rgba(255, 255, 255, 1);
                     }
-                    &:before{
-                        left:0;
-                        width:100%;
+                    &:before {
+                        left: 0;
+                        width: 100%;
                     }
                 }
             }
-            .nav-dropdown{
-                width: 100%;
-                //display: none;
+            .nav-dropdown {
+                width: 100%; //display: none;
                 overflow: hidden;
                 position: absolute;
-                .nav-back{
+                height: 0;
+                transition: all 0.1s;
+                .nav-back {
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0,0,0,0.7);
+                    background-color: rgba(0, 0, 0, 0.7);
                     position: absolute;
-                    transform:translateY(-100%);
-                    transition:all 0.2s;
-                    z-index:1;
+                    transform: translateY(-100%);
+                    transition: all 0.2s;
+                    z-index: 1;
                 }
-                .nav-section{
-                    transform:translateY(-300px);
-                    padding:0 6px;
+                .nav-section {
+                    transform: translateY(-300px);
+                    padding: 0 6px;
                     line-height: 32px;
-                    transition:all 0.2s;
-                    //opacity: 0;
-                    color:rgba(255,255,255,0.87);
+                    transition: all 0.2s; //opacity: 0;
+                    color: rgba(255, 255, 255, 0.87);
                     cursor: pointer;
                     position: relative;
-                    z-index:2;
-                    a{
-                        color:rgba(255,255,255,0.87);
+                    z-index: 2;
+                    a {
+                        color: rgba(255, 255, 255, 0.87);
                         text-decoration: none;
-                        transition:all 0.3s;
+                        transition: all 0.3s;
                         position: relative;
                         z-index: 20;
                         display: block;
                         width: 100%;
                         height: 100%;
                     }
-                    &:before{
-                        content:'';
+                    &:before {
+                        content: '';
                         background-color: #fff;
                         width: 100%;
                         height: 32px;
                         display: block;
                         position: absolute;
-                        left:0;
+                        left: 0;
                         opacity: 0;
-                        transition:all 0.3s;
+                        transition: all 0.3s;
                         z-index: 2;
                     }
-                    &:hover{
-                        &:before{
+                    &:hover {
+                        &:before {
                             opacity: 0.16;
                         }
-                        color:rgba(255,255,255,1);
-                        a{
-                            color:rgba(255,255,255,1);
+                        color:rgba(255,
+                        255,
+                        255,
+                        1);
+                        a {
+                            color: rgba(255, 255, 255, 1);
                         }
                     }
-                    &.selected{
-
-                    }
+                    &.selected {}
                 }
             }
-            &:hover{
-                .nav-dropdown{
-                    .nav-back{
-                        transform:translateY(0);
+            &:hover {
+                .nav-dropdown {
+                    height: auto;
+                    .nav-back {
+                        transform: translateY(0);
                     }
-                    .nav-section{
-                        transform:translateY(0);
+                    .nav-section {
+                        transform: translateY(0);
                     }
                 }
             }
@@ -187,130 +187,130 @@ body{
     }
 }
 
-.footer{
+.footer {
     height: 120px;
-    color:#bfbfbf;
+    color: #bfbfbf;
     font-size: 20px;
     line-height: 24px;
     display: flex;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: @dark-background;
 }
 
-.markdown{
+.markdown {
     line-height: 48px;
-    >h2{
+    >h2 {
         font-size: 20px;
         line-height: 48px;
-        color:@primary-title-color;
+        color: @primary-title-color;
         font-weight: bolder;
-        border-bottom:1px solid #eaeaea;
-        margin-bottom:32px;
+        border-bottom: 1px solid #eaeaea;
+        margin-bottom: 32px;
     }
-    >p{
-        color:@text-color-light;
+    >p {
+        color: @text-color-light;
         font-size: 16px;
         line-height: 32px;
-        margin:-8px 0 16px 0;
+        margin: -8px 0 16px 0;
     }
-    >ol{
-        border-left:2px solid @primary-color;
-        list-style:none;
-        overflow:visible;
+    >ol {
+        border-left: 2px solid @primary-color;
+        list-style: none;
+        overflow: visible;
         counter-reset: li;
-        padding:0;
-        margin-left:9px;
-        >li{
-            color:@text-color-light;
+        padding: 0;
+        margin-left: 9px;
+        >li {
+            color: @text-color-light;
             font-size: 16px;
             line-height: 18px;
             position: relative;
-            padding-left:17px;
-            margin-bottom:30px;
-            &:before{
+            padding-left: 17px;
+            margin-bottom: 30px;
+            &:before {
                 content: counter(li);
                 counter-increment: li;
                 display: block;
                 position: absolute;
-                top:-1px;
-                left:-11px;
-                width:20px;
-                height:20px;
+                top: -1px;
+                left: -11px;
+                width: 20px;
+                height: 20px;
                 line-height: 20px;
                 text-align: center;
                 background: @primary-color;
                 border-radius: 50%;
-                color:#fff;
+                color: #fff;
                 font-size: 12px;
                 font-weight: bolder;
                 font-family: helvetica;
             }
-            >pre{
-                padding:16px;
-                margin:20px 0 0 0;
-                border-radius:2px;
+            >pre {
+                padding: 16px;
+                margin: 20px 0 0 0;
+                border-radius: 2px;
                 background: #f2f2f2;
             }
-            >a{
-                color:@primary-color;
+            >a {
+                color: @primary-color;
                 display: inline-block;
                 text-decoration: none;
-                border-bottom:1px solid @primary-color;
+                border-bottom: 1px solid @primary-color;
             }
         }
     }
-    >a{
-        color:@primary-color;
+    >a {
+        color: @primary-color;
         font-size: 16px;
         line-height: 24px;
         font-weight: bold;
         cursor: pointer;
         display: inline-block;
         text-decoration: none;
-        border-bottom:1px solid @primary-color;
+        border-bottom: 1px solid @primary-color;
     }
 }
 
-@media (max-width:420px) and (min-width:310px){
-    .header{
+@media (max-width:420px) and (min-width:310px) {
+    .header {
         height: 72px;
-        .logo{
+        .logo {
             background-image: url("@{img-root}/logo@2x.png");
             background-repeat: no-repeat;
             background-position: left center;
-            background-size:100% 100%;
+            background-size: 100% 100%;
             width: 120px;
             height: 40px;
         }
-        .navigator{
-            .nav-item{
-                margin-left:12px;
-                .nav-title{
-                    padding:0;
-                    color:#fff;
-                    font-weight:normal;
-                    a{
-                        color:#fff;
-                        font-weight:normal;
+        .navigator {
+            .nav-item {
+                margin-left: 12px;
+                .nav-title {
+                    padding: 0;
+                    color: #fff;
+                    font-weight: normal;
+                    a {
+                        color: #fff;
+                        font-weight: normal;
                     }
                 }
             }
-            .mobile-hide{
+            .mobile-hide {
                 display: none;
             }
         }
     }
-    .footer{
+    .footer {
         height: 72px;
-        color:#bfbfbf;
+        color: #bfbfbf;
         font-size: 16px;
         line-height: 24px;
         display: flex;
-        align-items:center;
-        justify-content:center;
-        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         background-color: @dark-background;
     }
 }
