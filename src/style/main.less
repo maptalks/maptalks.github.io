@@ -189,6 +189,9 @@ body {
             }
         }
     }
+    .mobile-navigator {
+        display: none;
+    }
 }
 
 .footer {
@@ -277,6 +280,70 @@ body {
     }
 }
 
+.mobile-navigator {
+    position: relative;
+    .action-button {
+        width: 24px;
+        height: 24px;
+    }
+    .menu {
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        right: 0;
+        top: 28px;
+        text-align: right;
+        padding: 0 8px;
+        width: 120px;
+        .nav-item {}
+        .nav-item .nav-title,
+        .nav-item .nav-title a {
+            color: #fff;
+            text-decoration: none;
+            text-align: right;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 40px;
+        }
+        .nav-item .nav-dropdown {
+            .nav-section {
+                a {
+                    color: #fff;
+                    display: block;
+                    background: rgba(255, 255, 255, 0.1);
+                    padding-right: 8px;
+                    text-decoration: none;
+                    text-align: right;
+                    font-size: 10px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
+
+.mobile-navigator {
+    .action-button {
+        background-image: url("@{img-root}/nav.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    .menu {
+        display: none;
+    }
+    &.-active {
+        .action-button {
+            background-image: url("@{img-root}/nav-close.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+        }
+        .menu {
+            display: block;
+        }
+    }
+}
+
 @media (max-width:420px) and (min-width:310px) {
     .header {
         height: 72px;
@@ -289,21 +356,10 @@ body {
             height: 40px;
         }
         .navigator {
-            .nav-item {
-                margin-left: 12px;
-                .nav-title {
-                    padding: 0;
-                    color: #fff;
-                    font-weight: normal;
-                    a {
-                        color: #fff;
-                        font-weight: normal;
-                    }
-                }
-            }
-            .mobile-hide {
-                display: none;
-            }
+            display: none;
+        }
+        .mobile-navigator {
+            display: block;
         }
     }
     .footer {
