@@ -123,8 +123,7 @@
                     background-color: @dark-background;
                     .img-area {
                         a img {
-                            //width: 120%;
-                            //margin-left: -10%;
+                            width: 100%; //margin-left: -10%;
                         }
                     }
                     .content-area {
@@ -240,7 +239,7 @@
     }
 }
 
-@media (max-width:1366px) and (min-width:1000px) {
+@media (max-width:1600px) and (min-width:1000px) {
     .main-entry .feature-area .feature-panel {
         height: @area-height - 100;
     }
@@ -253,55 +252,28 @@
         }
     }
     .main-entry .feature-area .feature-panel {
-        &.three-dimensional .img-area a img {
-            width: 100%;
-        }
         &.extensible .img-area a img {
-            width: 156%;
-            left: -30px;
-        }
-        &.extensible {
-            .img-area {
-                position: relative;
-                left: -60px;
-            }
-            .content-area {
-                position: relative;
-                left: -60px;
-            }
-        }
-        &.performant .img-area a img {
-            width: 100%;
+            width: 160%;
+            left: -58px;
         }
     }
 }
 
-@media (max-width:1599px) and (min-width:1367px) {
-    .main-entry .feature-area .feature-panel .center-block .content-area {
-        .feature-text {
-            margin-top: 64px;
-            font-size: 18px;
-            line-height: 36px;
-            padding-top: 32px;
-        }
-    }
+@media (max-width:1920px) and (min-width:1601px) {
     .main-entry .feature-area .feature-panel {
-        &.three-dimensional .img-area a img {
-            width: 100%;
-        }
         &.extensible .img-area a img {
             width: 156%;
-            left: -60px;
-        }
-        &.performant .img-area a img {
-            width: 70%;
-            left: 80px;
+            left: -79px;
         }
     }
 }
 
-@media (max-width:1919px) and (min-width:1600px) {}
-
-@media (max-width:2439px) and (min-width:1920px) {}
-
-@media (min-width:2440px) {}
+@media (min-width:1921px) {
+    .main-entry .feature-area .feature-panel {
+        height: @area-height + 100;
+        &.extensible .img-area a img {
+            width: 161%;
+            left: -94px;
+        }
+    }
+}

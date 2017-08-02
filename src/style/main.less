@@ -15,31 +15,27 @@ body {
 }
 
 .center-block {
-    @media screen and (max-width: 2440px) {
+    @media (min-width: 1921px) {
         width: 1600px;
         margin: 0 auto;
     }
-    @media screen and (max-width: 1920px) {
-        width: 1440px;
+    @media (max-width: 1920px) and (min-width:1601px) {
+        width: 1400px;
         margin: 0 auto;
     }
-    @media screen and (max-width: 1600px) {
-        width: 1280px;
-        margin: 0 auto;
-    }
-    @media screen and (max-width: 1366px) {
+    @media (max-width: 1600px) and (min-width:1000px) {
         width: 1000px;
         margin: 0 auto;
     }
-    @media screen and (max-width:768px) and (min-width:420px) {
+    @media (max-width:768px) and (min-width:420px) {
         width: auto;
         margin: 0 30px;
     }
-    @media screen and (max-width:420px) and (min-width:376px) {
+    @media (max-width:420px) and (min-width:376px) {
         width: auto;
         margin: 0 20px;
     }
-    @media screen and (max-width:375px) and (min-width:300px) {
+    @media (max-width:375px) and (min-width:300px) {
         width: auto;
         margin: 0 16px;
     }
@@ -348,13 +344,15 @@ body {
 @media (max-width:420px) and (min-width:310px) {
     .header {
         height: 72px;
-        .logo {
-            background-image: url("@{img-root}/logo@2x.png");
-            background-repeat: no-repeat;
-            background-position: left center;
-            background-size: 100% 100%;
-            width: 120px;
-            height: 40px;
+        .title-panel {
+            .logo {
+                background-image: url("@{img-root}/logo@2x.png");
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 100% 100%;
+                width: 120px;
+                height: 40px;
+            }
         }
         .navigator {
             display: none;

@@ -109,9 +109,6 @@
                         width: 100%;
                         img {
                             display: block;
-                            position: relative;
-                            width: 100%;
-                            height: auto;
                         }
                     }
                 }
@@ -153,12 +150,18 @@
                         background-size: cover;
                     }
                 }
+                .img-area a img {
+                    width: 100%;
+                }
             }
             &.extensible-mobile {
                 display: none;
             }
             &.extensible {
                 background-color: @dark-background;
+                .img-area a img {
+                    position: relative;
+                }
                 .content-area {
                     text-align: right;
                     .feature-icon {
@@ -186,6 +189,9 @@
                         background-repeat: no-repeat;
                         background-size: cover;
                     }
+                }
+                .img-area a img {
+                    width: 100%;
                 }
             }
         }
