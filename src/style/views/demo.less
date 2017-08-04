@@ -1,0 +1,104 @@
+.demo-viewer {
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+}
+
+.demo-viewer .sidebar {
+    height: 100%;
+    overflow: hidden;
+    width: 240px;
+    background: @dark-background;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-viewer .sidebar .menu {
+    margin: 0;
+    flex: 1;
+    padding: 16px;
+    overflow: auto;
+    >.list-tile {
+        list-style: none;
+        >.list-title {
+            font-size: 14px;
+            line-height: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+        >.list {
+            padding-left: 8px;
+            padding-bottom: 6px;
+            >.list-tile {
+                list-style: none;
+                cursor: pointer;
+                &:hover {
+                    a {
+                        color: #42a2e6;
+                    }
+                }
+                a {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #ccc;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.demo-viewer .demo-panel {
+    flex: 1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.demo-viewer .demo-panel .title-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+        font-size: 16px;
+        line-height: 32px;
+        color: #333;
+        font-weight: bold;
+    }
+    .action-area {
+        display: flex;
+        .action-button {
+            width: 96px;
+            line-height: 28px;
+            height: 32px;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            border: 2px solid @primary-color;
+            margin-left: 8px;
+            color: @primary-color;
+            background: #fcfcfc;
+            font-weight: bold;
+            &:hover {
+                color: #42a2e6;
+                border: 2px solid #42a2e6;
+                background: #fff;
+            }
+        }
+    }
+}
+
+.demo-viewer .demo-panel .content-area {
+    flex: 1;
+    border-top: 1px solid #eee;
+    background: #f8f8f8;
+    margin-top: 12px;
+    overflow: auto;
+}
+
+.demo-viewer .demo-panel .content-area .map-viewer {}
+
+.demo-viewer .demo-panel .content-area .code-viewer {}
+
+.demo-viewer .demo-panel .content-area .readme {}

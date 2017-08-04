@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>maptalks - demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="script/lib/prettify.css">
+        <script src="script/lib/run_prettify.js"></script>
+        <script type="text/javascript" src="script/maptalks/maptalks.custom.min.js"></script>
+    </head>
+
+    <body>
+        <div class="demo-viewer">
+            <div class="sidebar">
+                <div class="logo-area"></div>
+                <div class="search-bar">
+                    <input type="text">
+                </div>
+                <ul class="menu">
+                    <li class="list-tile">
+                        <div class="list-title">1&nbsp;地图</div>
+                        <ul class="list">
+                            <li class="list-tile">
+                                <a href="">1.1&nbsp;显示</a>
+                            </li>
+                            <li class="list-tile">
+                                <a href="">1.2&nbsp;设置倾斜和旋转</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-tile">
+                        <div class="list-title">2&nbsp;瓦片底图和投影</div>
+                        <ul class="list">
+                            <li class="list-tile">
+                                <a href="">2.1&nbsp;多个瓦片底图</a>
+                            </li>
+                            <li class="list-tile">
+                                <a href="">2.2&nbsp;WMS底图</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="demo-panel">
+                <div class="title-area">
+                    <div class="title">设置倾斜和旋转</div>
+                    <div class="action-area">
+                        <div class="action-button button">SOURCE</div>
+                        <div class="action-button button">OPEN</div>
+                        <div class="action-button button">EDIT</div>
+                        <div class="action-button button">COPY</div>
+                    </div>
+                </div>
+                <div class="content-area">
+                    <div class="map-viewer"></div>
+                    <div class="code-viewer">
+                        <pre class="prettyprint">
+ &lt;!DOCTYPE&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+     &lt;meta charset=&quot;UTF-8&quot; /&gt;
+     &lt;title&gt;Maptalks Quick Start&lt;/title&gt;
+     &lt;!-- or link to your downloaded files --&gt;
+     &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/maptalks/dist/maptalks.css&quot;&gt;
+     &lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;div style=&quot;width:800px;height:600px;&quot; id=&quot;map&quot;&gt;&lt;/div&gt;
+ &lt;script type=&quot;text/javascript&quot;&gt;
+   // create map in div &apos;map&apos;
+   var map = new maptalks.Map(&apos;map&apos;, {
+     center: [0, 0],
+     zoom: 1,
+     baseLayer: new maptalks.TileLayer(&apos;base&apos;, {
+       &apos;urlTemplate&apos; : &apos;http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png&apos;,
+       &apos;subdomains&apos;  : [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;]
+     }),
+     attribution: {
+       &apos;content&apos;:&apos;&amp;copy; &lt;a href=&quot;http://www.osm.org/copyright&quot;&gt;OSM&lt;/a&gt; contributors, &apos;+
+        &apos;&amp;copy; &lt;a href=&quot;https://carto.com/attributions&quot;&gt;CARTO&lt;/a&gt;&apos;
+     }
+   });
+ &lt;/script&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+                        </pre>
+                    </div>
+                    <div class="readme"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
