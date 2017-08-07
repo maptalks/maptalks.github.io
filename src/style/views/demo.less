@@ -1,23 +1,110 @@
+@control-gutter: 10px;
+@sidebar-width: 230px;
 .demo-viewer {
     overflow: hidden;
-    display: flex;
     height: 100%;
+    position: relative;
 }
 
 .demo-viewer .sidebar {
-    height: 100%;
     overflow: hidden;
-    width: 240px;
+    width: @sidebar-width;
     background: @dark-background;
     color: #fff;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    bottom: 20px;
+    .logo-area {
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: @control-gutter;
+    }
+    .lang-switch {
+        .lang-option {
+            font-size: 10px;
+            text-align: center;
+            padding: 0 4px;
+            line-height: 16px;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            transition: all 0.2s;
+            &:hover {
+                color: @primary-color;
+                border: 1px solid @primary-color;
+            }
+        }
+    }
+    .lang-switch {
+        .lang-en {
+            display: block;
+        }
+        .lang-cn {
+            display: none;
+        }
+        &.-en {
+            .lang-cn {
+                display: block;
+            }
+            .lang-en {
+                display: none;
+            }
+        }
+    }
+    .logo {
+        cursor: pointer;
+        display: block;
+        background-image: url("@{img-root}/logo.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 100% 100%;
+        height: 48px;
+        width: 144px;
+    }
+    .search-bar {
+        position: relative;
+        height: 24px;
+        padding-left: @control-gutter;
+        width: @sidebar-width - @control-gutter * 2;
+        .search-field {
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 2px;
+            line-height: 24px;
+            height: 24px;
+            padding: 0 0 0 4px;
+            font-size: 12px;
+            &:focus {
+                outline: none;
+            }
+        }
+        .search-icon {
+            border-radius: 4px;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 24px;
+            width: 24px;
+            .icon(@icon-name: "search");
+            cursor: pointer;
+        }
+    }
 }
 
 .demo-viewer .sidebar .menu {
-    margin: 0;
+    margin: 16px 0 0 0;
     flex: 1;
-    padding: 16px;
+    padding: @control-gutter;
+    padding-top: 0;
     overflow: auto;
     >.list-tile {
         list-style: none;
@@ -35,7 +122,7 @@
                 cursor: pointer;
                 &:hover {
                     a {
-                        color: #42a2e6;
+                        color: #80CAFF;
                     }
                 }
                 a {
@@ -50,11 +137,14 @@
 }
 
 .demo-viewer .demo-panel {
-    flex: 1;
-    padding: 16px;
+    position: absolute;
+    top: 0px;
+    left: @sidebar-width;
+    right: 0px;
+    bottom: 0px;
+    padding: 20px 0 20px 20px;
     display: flex;
     flex-direction: column;
-    background: #fff;
 }
 
 .demo-viewer .demo-panel .title-area {
@@ -63,27 +153,48 @@
     align-items: center;
     .title {
         font-size: 16px;
-        line-height: 32px;
+        line-height: 28px;
         color: #333;
         font-weight: bold;
     }
     .action-area {
         display: flex;
         .action-button {
-            width: 96px;
-            line-height: 28px;
-            height: 32px;
+            //width: 80px;
+            line-height: 24px;
+            height: 28px;
             box-sizing: border-box;
             transition: all 0.3s;
-            border: 2px solid @primary-color;
+            border: 1px solid @primary-color;
             margin-left: 8px;
+            padding: 0 6px 0 2px;
             color: @primary-color;
             background: #fcfcfc;
-            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon {
+                display: block;
+                margin-right: 2px;
+                width: 24px;
+                height: 24px;
+                &.source {
+                    .icon(@icon-name: "source");
+                }
+                &.open {
+                    .icon(@icon-name: "open");
+                }
+                &.edit {
+                    .icon(@icon-name: "edit");
+                }
+                &.copy {
+                    .icon(@icon-name: "copy");
+                }
+            }
             &:hover {
                 color: #42a2e6;
-                border: 2px solid #42a2e6;
-                background: #fff;
+                border: 1px solid #42a2e6;
+                background: #f8f8f8;
             }
         }
     }
@@ -91,14 +202,100 @@
 
 .demo-viewer .demo-panel .content-area {
     flex: 1;
-    border-top: 1px solid #eee;
-    background: #f8f8f8;
-    margin-top: 12px;
+    border-top: 1px solid #ccc;
+    margin-top: 8px;
     overflow: auto;
+    padding-top: 12px;
 }
 
-.demo-viewer .demo-panel .content-area .map-viewer {}
+.demo-viewer .demo-panel .content-area .map-viewer {
+    border-radius: 4px;
+    overflow: hidden;
+    .map-view {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
 
-.demo-viewer .demo-panel .content-area .code-viewer {}
+.demo-viewer .demo-panel .content-area .code-viewer {
+    .code-snippet {
+        margin-top: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        .code-title {
+            font-size: 16px;
+            line-height: 40px;
+            color: ;
+            font-weight: bold;
+            padding: 0 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        .prettyprint {
+            margin: 0;
+            padding: 12px;
+            border: none;
+            background: #f8f8f8;
+            white-space: pre-wrap;
+        }
+    }
+}
 
-.demo-viewer .demo-panel .content-area .readme {}
+.demo-viewer .demo-panel .content-area .md {
+    >h1 {
+        font-size: 30px;
+        line-height: 40px;
+        color: #333;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+    }
+    >h2 {
+        font-size: 18px;
+        line-height: 48px;
+        color: #333;
+        font-weight: bold;
+        margin: 8px 0 0 0;
+        padding: 0;
+    }
+    >p {
+        font-size: 15px;
+        line-height: 25px;
+        color: #666;
+        margin: 0;
+        padding: 0 0 20px 0;
+    }
+    >ul {
+        margin: 0;
+        padding: 0 0 16px 32px;
+        >li {
+            font-size: 15px;
+            line-height: 25px;
+            color: #666;
+            margin: 0;
+            padding: 0;
+            list-style: ;
+            padding: 4px 0;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: @primary-color;
+    }
+}
+
+.icon(@icon-name) {
+    background-image: url("@{img-root}/icons/@{icon-name}.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 24px;
+    height: 24px;
+}
+
+.icon {
+    &.prev {
+        .icon(@icon-name: "prev");
+    }
+}

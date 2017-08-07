@@ -42,6 +42,29 @@ body {
     }
 }
 
+.scroll-block {
+    padding-right: 8px;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        opacity: 0;
+        background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #eee;
+        border-radius: 3px;
+    }
+}
+
+.icon(@icon-name) {
+    background-image: url("@{img-root}/action-icon/@{icon-name}.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
