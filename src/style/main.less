@@ -344,20 +344,14 @@ body {
 
 .mobile-navigator {
     .action-button {
-        background-image: url("@{img-root}/nav.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
+        .icon(@icon-name: "nav");
     }
     .menu {
         display: none;
     }
     &.-active {
         .action-button {
-            background-image: url("@{img-root}/nav-close.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
+            .icon(@icon-name: "nav-close");
         }
         .menu {
             display: block;
@@ -395,5 +389,12 @@ body {
         justify-content: center;
         flex-direction: column;
         background-color: @dark-background;
+    }
+    .scroll-block {
+        padding-right: 0;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
     }
 }
