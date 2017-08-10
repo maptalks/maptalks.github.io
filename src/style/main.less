@@ -10,6 +10,7 @@
 @import "views/support";
 @import "views/plugins";
 @import "views/gallery";
+@import "views/demo";
 body {
     background: #fdfdfd;
 }
@@ -39,6 +40,29 @@ body {
         width: auto;
         margin: 0 16px;
     }
+}
+
+.scroll-block {
+    padding-right: 8px;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    &::-webkit-scrollbar-track {
+        opacity: 0;
+        background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #eee;
+        border-radius: 3px;
+    }
+}
+
+.icon(@icon-name) {
+    background-image: url("@{img-root}/action-icon/@{icon-name}.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .header {
@@ -320,20 +344,14 @@ body {
 
 .mobile-navigator {
     .action-button {
-        background-image: url("@{img-root}/nav.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
+        .icon(@icon-name: "nav");
     }
     .menu {
         display: none;
     }
     &.-active {
         .action-button {
-            background-image: url("@{img-root}/nav-close.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
+            .icon(@icon-name: "nav-close");
         }
         .menu {
             display: block;
@@ -371,5 +389,12 @@ body {
         justify-content: center;
         flex-direction: column;
         background-color: @dark-background;
+    }
+    .scroll-block {
+        padding-right: 0;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
     }
 }
