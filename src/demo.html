@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>maptalks - demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="style/demo-entry.css">
+        <link rel="stylesheet" href="script/lib/prettify.css">
+        <script src="script/lib/run_prettify.js"></script>
+        <script type="text/javascript" src="script/maptalks/maptalks.custom.min.js"></script>
+    </head>
+
+    <body>
+        <div class="demo-viewer">
+            <div class="sidebar">
+                <div class="logo-area">
+                    <a href="https://maptalks.org/" class="logo">
+                    </a>
+                    <div class="lang-switch">
+                        <div class="lang-option lang-en">EN</div>
+                        <div class="lang-option lang-cn">中文</div>
+                    </div>
+                </div>
+                <div class="menu-button"></div>
+                <div class="menu-area">
+                    <div class="action-bar">
+                        <div class="search-bar">
+                            <input type="text" class="search-field">
+                            <div class="search-button"></div>
+                        </div>
+                        <div class="all-download-button">全部下载</div>
+                    </div>
+                    <ul class="menu scroll-block">
+                        <li class="list-tile">
+                            <div class="list-title">1&nbsp;地图</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">1.1&nbsp;显示</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.2&nbsp;设置倾斜和旋转</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.3&nbsp;添加常用控件</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.4&nbsp;单页面多地图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.5&nbsp;地图联动</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.6&nbsp;限制范围</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.7&nbsp;限制缩放级别</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">2&nbsp;瓦片底图和投影</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">2.1&nbsp;多个瓦片底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.2&nbsp;WMS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.3&nbsp;Vector Tile底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.4&nbsp;ArcGIS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.5&nbsp;LOD和自定义瓦片系统</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">1&nbsp;地图</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">1.1&nbsp;显示</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.2&nbsp;设置倾斜和旋转</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.3&nbsp;添加常用控件</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.4&nbsp;单页面多地图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.5&nbsp;地图联动</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.6&nbsp;限制范围</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.7&nbsp;限制缩放级别</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">2&nbsp;瓦片底图和投影</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">2.1&nbsp;多个瓦片底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.2&nbsp;WMS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.3&nbsp;Vector Tile底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.4&nbsp;ArcGIS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.5&nbsp;LOD和自定义瓦片系统</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">1&nbsp;地图</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">1.1&nbsp;显示</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.2&nbsp;设置倾斜和旋转</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.3&nbsp;添加常用控件</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.4&nbsp;单页面多地图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.5&nbsp;地图联动</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.6&nbsp;限制范围</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.7&nbsp;限制缩放级别</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">2&nbsp;瓦片底图和投影</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">2.1&nbsp;多个瓦片底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.2&nbsp;WMS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.3&nbsp;Vector Tile底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.4&nbsp;ArcGIS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.5&nbsp;LOD和自定义瓦片系统</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">1&nbsp;地图</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">1.1&nbsp;显示</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.2&nbsp;设置倾斜和旋转</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.3&nbsp;添加常用控件</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.4&nbsp;单页面多地图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.5&nbsp;地图联动</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.6&nbsp;限制范围</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.7&nbsp;限制缩放级别</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">2&nbsp;瓦片底图和投影</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">2.1&nbsp;多个瓦片底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.2&nbsp;WMS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.3&nbsp;Vector Tile底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.4&nbsp;ArcGIS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.5&nbsp;LOD和自定义瓦片系统</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">1&nbsp;地图</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">1.1&nbsp;显示</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.2&nbsp;设置倾斜和旋转</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.3&nbsp;添加常用控件</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.4&nbsp;单页面多地图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.5&nbsp;地图联动</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.6&nbsp;限制范围</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">1.7&nbsp;限制缩放级别</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-tile">
+                            <div class="list-title">2&nbsp;瓦片底图和投影</div>
+                            <ul class="list">
+                                <li class="list-tile">
+                                    <a href="">2.1&nbsp;多个瓦片底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.2&nbsp;WMS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.3&nbsp;Vector Tile底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.4&nbsp;ArcGIS底图</a>
+                                </li>
+                                <li class="list-tile">
+                                    <a href="">2.5&nbsp;LOD和自定义瓦片系统</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="demo-panel">
+                <div class="title-area">
+                    <div class="title">设置倾斜和旋转</div>
+                    <div class="action-area">
+                        <div class="action-button button">
+                            <i class="icon source"></i> source
+                        </div>
+                        <div class="action-button button">
+                            <i class="icon open"></i>open
+                        </div>
+                        <div class="action-button button">
+                            <i class="icon edit"></i>edit
+                        </div>
+                        <div class="action-button button">
+                            <i class="icon copy"></i>copy
+                        </div>
+                    </div>
+                </div>
+                <div class="content-area scroll-block">
+                    <div class="map-viewer">
+                        <img class="map-view" src="resource/image/placeholder.png">
+                    </div>
+                    <div class="readme md">
+                        <h2>Readme</h2>
+                        <p>
+                            A Mapbox style is a document that defines the visual appearance of a map: what data to draw, the order to draw it in, and
+                            how to style the data when drawing it. A style document is a
+                            <a href="">JSON</a> object with specific root level and nested properties. This specification
+                            defines and describes these properties.
+                        </p>
+                        <p>
+                            The intended audience of this specification includes:
+                        </p>
+                        <ul>
+                            <li>
+                                Advanced designers and cartographers who want to write styles by hand rather than use
+                                <a href="">Mapbox Studio</a>
+                            </li>
+                            <li>
+                                Developers using style-related features of
+                                <a href="">Mapbox GL JS</a> or the
+                                <a href="">Mapbox Android SDK</a>
+                            </li>
+                            <li>
+                                Authors of software that generates or processes Mapbox styles.
+                            </li>
+                        </ul>
+                        <p>
+                            Developers using the
+                            <a href="">Mapbox iOS SDK</a> or
+                            <a href="">Mapbox macOS SDK</a>should consult the iOS SDK API reference for platform-appropriate
+                            documentation of style-related features.
+                        </p>
+                    </div>
+                    <div class="code-viewer">
+                        <div class="code-snippet html">
+                            <div class="code-title">index.html</div>
+                            <pre class="prettyprint">&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;</pre>
+                        </div>
+                        <div class="code-snippet css">
+                            <div class="code-title">index.css</div>
+                            <pre class="prettyprint">
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}</pre>
+                        </div>
+                        <div class="code-snippet js">
+                            <div class="code-title">index.js</div>
+                            <pre class="prettyprint">
+var map = new maptalks.Map('map', {
+  center: [-0.113049,51.498568],
+  zoom: 14,
+  baseLayer: new maptalks.TileLayer('base', {
+    urlTemplate: '$(urlTemplate)',
+    subdomains: $(subdomains)
+  })
+});</pre>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="script/lib/jquery.js"></script>
+        <script>
+            $(".lang-option").click(function () {
+                $(".lang-switch").toggleClass("-en");
+            });
+
+            $(".menu-button").click(function () {
+                $(".sidebar").toggleClass("-active");
+            });
+        </script>
+    </body>
+
+</html>
