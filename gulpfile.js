@@ -4,7 +4,7 @@ var connect = require('gulp-connect')
 var autoprefixer = require('gulp-autoprefixer')
 var paths = {
     styleSrc: './src/style/**/*.less',
-    styleEntries: ['./src/style/main.less'],
+    styleEntries: ['./src/style/main.less', './src/style/views/demo-entry.less'],
     styleDist: './dist/style',
     scriptSrc: './src/script/**/*',
     scriptDist: './dist/script',
