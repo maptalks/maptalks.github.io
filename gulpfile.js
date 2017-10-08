@@ -1,3 +1,4 @@
+var async = require('async')
 var gulp = require('gulp')
 var less = require('gulp-less')
 var connect = require('gulp-connect')
@@ -19,7 +20,7 @@ var paths = {
 }
 
 gulp.task('buildStyle', function () {
-    gulp.src(paths.styleEntries)
+    return gulp.src(paths.styleEntries)
         .pipe(less())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -29,27 +30,34 @@ gulp.task('buildStyle', function () {
 })
 
 gulp.task('buildScript', function () {
-    gulp.src(paths.scriptSrc)
+    return gulp.src(paths.scriptSrc)
         .pipe(gulp.dest(paths.scriptDist))
 })
 
 gulp.task('copyPages', function () {
-    paths.staticPageSrc.forEach(function (pageSrc, idx) {
-        gulp.src(pageSrc)
-            .pipe(gulp.dest(paths.staticPageDist[idx]))
+    var tasks = paths.staticPageSrc.map(function (pageSrc, idx) {
+        return new Promise(function (resolve, reject) {
+            var stream = gulp.src(pageSrc).pipe(gulp.dest(paths.staticPageDist[idx]))
+            stream.on('end', function () {
+                resolve()
+            })
+            stream.on('error', function (err) {
+                reject(err)
+            })
+        })
     })
+    return Promise.all(tasks)
 });
 
 gulp.task('buildImage', function () {
-    gulp.src(paths.imageSrc)
+    return gulp.src(paths.imageSrc)
         .pipe(gulp.dest(paths.imageDist))
 })
 
 gulp.task('buildTemplate', function () {
-    gulp.src(paths.templateSrc)
+    return gulp.src(paths.templateSrc)
         .pipe(gulp.dest(paths.templateDist))
 })
-
 
 gulp.task('watch', function () {
     gulp.watch(paths.scriptSrc, ['buildScript'])
@@ -72,7 +80,7 @@ gulp.task('connect', function () {
 gulp.task('build', ['buildImage', 'buildTemplate', 'buildStyle', 'buildScript', 'copyPages'])
 
 gulp.task('deploy', ['build'], function () {
-    return gulp.src('./dist/**/*')
+    return gulp.src('dist/**/*')
         .pipe(ghPages({
             message: 'Deploy to GitHub Pages [ci skip]'
         }))
