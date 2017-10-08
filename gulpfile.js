@@ -2,6 +2,8 @@ var gulp = require('gulp')
 var less = require('gulp-less')
 var connect = require('gulp-connect')
 var autoprefixer = require('gulp-autoprefixer')
+var ghPages = require('gulp-gh-pages')
+
 var paths = {
     styleSrc: './src/style/**/*.less',
     styleEntries: ['./src/style/main.less', './src/style/views/demo-entry.less'],
@@ -56,7 +58,7 @@ gulp.task('watch', function () {
     gulp.watch(paths.imageSrc, ['buildImage'])
     paths.staticPageSrc.forEach(function (pageSrc) {
         gulp.watch(paths.pageSrc, ['copyPages'])
-    });
+    })
 })
 
 gulp.task('connect', function () {
@@ -68,5 +70,12 @@ gulp.task('connect', function () {
 })
 
 gulp.task('build', ['buildImage', 'buildTemplate', 'buildStyle', 'buildScript', 'copyPages'])
+
+gulp.task('deploy', ['build'], function () {
+    return gulp.src('dist/**/*')
+        .pipe(ghPages({
+            message: 'Deploy to GitHub Pages [ci skip]'
+        }))
+})
 
 gulp.task('default', ['build', 'watch', 'connect'])
