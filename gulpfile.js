@@ -81,6 +81,7 @@ gulp.task('build', ['buildImage', 'buildTemplate', 'buildStyle', 'buildScript', 
 gulp.task('deploy', ['build'], function () {
     return gulp.src('dist/**/*')
         .pipe(ghPages({
+            branch: 'master',
             message: 'Deploy to GitHub Pages [ci skip]'
         }))
 })

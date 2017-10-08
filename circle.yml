@@ -7,7 +7,7 @@ machine:
 general:
   branches:
     ignore:
-      - gh-pages
+      - master
 
 dependencies:
   override:
@@ -21,7 +21,7 @@ test:
 
 deployment:
   pages:
-    branch: master
+    branch: source
     commands:
       - git config --global user.email "$GH_EMAIL"
       - git config --global user.name "$GH_NAME"
