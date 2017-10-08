@@ -72,7 +72,7 @@ gulp.task('connect', function () {
 gulp.task('build', ['buildImage', 'buildTemplate', 'buildStyle', 'buildScript', 'copyPages'])
 
 gulp.task('deploy', ['build'], function () {
-    return gulp.src('dist/**/*')
+    return gulp.src('./dist/**/*')
         .pipe(ghPages({
             message: 'Deploy to GitHub Pages [ci skip]'
         }))
