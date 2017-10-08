@@ -1,4 +1,3 @@
-var async = require('async')
 var gulp = require('gulp')
 var less = require('gulp-less')
 var connect = require('gulp-connect')
@@ -47,7 +46,7 @@ gulp.task('copyPages', function () {
         })
     })
     return Promise.all(tasks)
-});
+})
 
 gulp.task('buildImage', function () {
     return gulp.src(paths.imageSrc)
