@@ -1,7 +1,9 @@
 $(function() {
   initMap();
-  getVersion();
+
 });
+
+getVersion();
 
 function getVersion() {
     $.get('https://raw.githubusercontent.com/maptalks/maptalks.js/master/package.json', function(result){
