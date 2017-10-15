@@ -1,6 +1,6 @@
 # maptalks.github.io
 
-Source repository of [maptalks.js's web site](https://maptalks.org).
+Source repository of [maptalks's web site](https://maptalks.org).
 
 ## Setup
 
@@ -19,7 +19,8 @@ gulp
 * Start gulp-connet on port 2000, begin to watch file changes to rebuild
 
 3. Open the browser at
-(http://localhost:2000/)[http://localhost:2000/]
+
+[http://localhost:2000/](http://localhost:2000/)
 
 ## Contribute and Publish
 
