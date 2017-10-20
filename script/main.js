@@ -5,6 +5,10 @@ $(function() {
 
 getVersion();
 
+$(".action-button").click(function () {
+    $(".mobile-navigator").toggleClass("-active");
+});
+
 function getVersion() {
     $.get('https://raw.githubusercontent.com/maptalks/maptalks.js/master/package.json', function(result){
        $('.secondary-text').text('version: ' + result.version);

@@ -98,6 +98,23 @@
                 <ul class="plugin-list center-block featured-plugin-list">
                     <li class="plugin-item">
                         <div class="img-panel">
+                            <a href="https://github.com/maptalks/maptalks.three"><img src="plugins/screenshots/three.png" alt="maptalks.three"></a>
+                            <div class="mask">
+                                <div class="author">
+                                    <div class="avatar" style="background-image: url(https://github.com/fuzhenn.png?size=28)"></div>
+                                    <div class="author-name"><a href="https://github.com/fuzhenn">fuzhenn</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-panel">
+                            <div class="plugin-name"><a href="https://github.com/maptalks/maptalks.three">maptalks.three</a></div>
+                            <div class="intro">
+                                A maptalks layer to render with THREE.js.
+                            </div>
+                        </div>
+                    </li>
+                    <li class="plugin-item">
+                        <div class="img-panel">
                             <a href="https://github.com/maptalks/maptalks.mapboxgl"><img src="plugins/screenshots/mapboxgl.png" alt="maptalks.mapboxgl"></a>
                             <div class="mask">
                                 <div class="author">
@@ -369,15 +386,17 @@
                 </ul>
             </div>
             <div class="footer">
-                <!-- <div>
-                    京ICP备11017824号-4 / 京ICP证130164号
-                </div>
                 <div>
-                    北京市公安局朝阳分局备案编号:110105000501. Copyright ©maptalks
-                </div> -->
+                    &copy;maptalks.org 2017
+                </div>
             </div>
         </div>
+        <script src="script/lib/jquery.js"></script>
         <script>
+            $(".action-button").click(function () {
+                $(".mobile-navigator").toggleClass("-active");
+            });
+
             (function (i, s, o, g, r, a, m) {
                 i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                     (i[r].q = i[r].q || []).push(arguments)
