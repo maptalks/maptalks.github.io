@@ -170,6 +170,7 @@
             <div class="footer">
             </div>
         </div>
+        <script src="script/lib/jquery.js"></script>
         <script type="text/javascript" src="script/maptalks/maptalks.min.js"></script>
         <script type="text/javascript">
             // create map in div 'map'
@@ -183,6 +184,10 @@
                 attributionControl: {
                     'content': '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
                 }
+            });
+
+            $(".action-button").click(function () {
+                $(".mobile-navigator").toggleClass("-active");
             });
         </script>
         <script>
