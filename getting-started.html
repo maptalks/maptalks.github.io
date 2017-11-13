@@ -119,11 +119,11 @@
                     </li>
                     <li>
                         Create a hello.html in the folder. <br><br> Include maptalks css file in the head section, you can
-                        either use unpkg.com or downloaded one in step 2.<br>
-                        <pre class="prettyprint">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/maptalks/dist/maptalks.css&quot;&gt;</pre><br> Include maptalks script in the head section, you can either use unpkg.com or downloaded one
+                        either use jsdelivr.net or downloaded one in step 2.<br>
+                        <pre class="prettyprint">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.css&quot;&gt;</pre><br> Include maptalks script in the head section, you can either use jsdelivr.net or downloaded one
                         in step 2.<br>
 
-                        <pre class="prettyprint">&lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;</pre><br> Content of hello.html: <br>
+                        <pre class="prettyprint">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;</pre><br> Content of hello.html: <br>
                         <pre class="prettyprint">
  &lt;!DOCTYPE&gt;
  &lt;html&gt;
@@ -131,8 +131,8 @@
      &lt;meta charset=&quot;UTF-8&quot; /&gt;
      &lt;title&gt;Maptalks Quick Start&lt;/title&gt;
      &lt;!-- or link to your downloaded files --&gt;
-     &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/maptalks/dist/maptalks.css&quot;&gt;
-     &lt;script type=&quot;text/javascript&quot; src=&quot;https://unpkg.com/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;
+     &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.css&quot;&gt;
+     &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.min.js&quot;&gt;&lt;/script&gt;
  &lt;/head&gt;
  &lt;body&gt;
  &lt;div style=&quot;width:800px;height:600px;&quot; id=&quot;map&quot;&gt;&lt;/div&gt;
@@ -140,9 +140,9 @@
    // create map in div &apos;map&apos;
    var map = new maptalks.Map(&apos;map&apos;, {
      center: [0, 0],
-     zoom: 1,
+     zoom: 2,
      baseLayer: new maptalks.TileLayer(&apos;base&apos;, {
-       &apos;urlTemplate&apos; : &apos;https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png&apos;,
+       &apos;urlTemplate&apos; : &apos;http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png&apos;,
        &apos;subdomains&apos;  : [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]
      }),
      attribution: {
