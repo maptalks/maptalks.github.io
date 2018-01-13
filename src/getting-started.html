@@ -143,12 +143,10 @@
      zoom: 2,
      baseLayer: new maptalks.TileLayer(&apos;base&apos;, {
        &apos;urlTemplate&apos; : &apos;http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png&apos;,
-       &apos;subdomains&apos;  : [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;]
-     }),
-     attribution: {
-       &apos;content&apos;:&apos;&amp;copy; &lt;a href=&quot;http://www.osm.org/copyright&quot;&gt;OSM&lt;/a&gt; contributors, &apos;+
-        &apos;&amp;copy; &lt;a href=&quot;https://carto.com/attributions&quot;&gt;CARTO&lt;/a&gt;&apos;
-     }
+       &apos;subdomains&apos;  : [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;],
+       &apos;attribution&apos;  : &apos;&amp;copy; &lt;a href=&quot;http://www.osm.org/copyright&quot;&gt;OSM&lt;/a&gt; contributors, &apos;+
+       &apos;&amp;copy; &lt;a href=&quot;https://carto.com/attributions&quot;&gt;CARTO&lt;/a&gt;&apos;
+     })
    });
  &lt;/script&gt;
  &lt;/body&gt;
@@ -179,11 +177,9 @@
                 zoom: 1,
                 baseLayer: new maptalks.TileLayer('base', {
                     'urlTemplate' : 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
-                    'subdomains'  : ['a','b','c','d']
-                }),
-                attributionControl: {
-                    'content': '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
-                }
+                    'subdomains'  : ['a','b','c','d'],
+                    'attribution' : '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
+                })
             });
 
             $(".action-button").click(function () {
