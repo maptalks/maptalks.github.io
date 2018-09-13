@@ -3,7 +3,7 @@ var less = require('gulp-less')
 var connect = require('gulp-connect')
 var autoprefixer = require('gulp-autoprefixer')
 var cleanCSS = require('gulp-clean-css')
-var ghPages = require('gulp-gh-pages')
+var ghPages = require('@justeat/gulp-gh-pages')
 
 var paths = {
     styleSrc: './src/style/**/*.less',
